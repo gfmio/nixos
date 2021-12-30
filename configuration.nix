@@ -16,9 +16,11 @@ let
 in 
 {
   imports = [
+    <home-manager/nixos>
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+
 
   #
   # Core nixos settings
@@ -42,12 +44,24 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = mkIf nvidia [ "nvidia-drm.modeset=1" ];
   boot.blacklistedKernelModules = mkIf nvidia [ "nouveau" ];
+  boot.initrd.availableKernelModules = mkIf nvidia [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
+  boot.cleanTmpDir = true;
 
   #
   # Timezone
   #
 
   time.timeZone = "Europe/London";
+
+  # Use the systemd-timesyncd SNTP client to sync the system clock (enabled by default)
+  services.timesyncd.enable = true;
+
+  #
+  # sudo
+  #
+
+  # Disable sudo password for the wheel group
+  security.sudo.wheelNeedsPassword = false;
 
   #
   # Networking
@@ -156,6 +170,12 @@ in
   };
 
   #
+  # dconf
+  #
+
+  programs.dconf.enable = true;
+
+  #
   # Users
   #
 
@@ -163,6 +183,10 @@ in
   users.users.gfmio = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  };
+  home-manager.users.gfmio = { pkgs, ... }: {
+    home.packages = [ ];
+    programs.bash.enable = true;
   };
 
   #
@@ -176,7 +200,7 @@ in
   # 
 
   services.openssh.enable = true;
-  services.openssh.permitRootLogin = "yes";
+  services.openssh.permitRootLogin = "no";
 
   #
   # GPG
@@ -241,4 +265,42 @@ in
     dex
     xss-lock
   ];
+
+  fonts = {
+    enableDefaultFonts = true;
+    enableFontDir = true;
+    enableGhostscriptFonts = true;
+    fonts = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk # Chinese, Japanese, Korean
+      noto-fonts-emoji
+      noto-fonts-extra
+      fira-code # Monospace font with programming ligatures
+      hack-font # A typeface designed for source code
+      fira-mono # Mozilla's typeface for Firefox OS
+      corefonts  # Microsoft free fonts
+      ubuntu_font_family
+      roboto # Android
+    ];
+  };
+
+  nix = {
+    # Automatically run the garbage collector
+    gc.automatic = false;
+    gc.dates = "12:45";
+    # Automatically run the nix store optimiser
+    optimise.automatic = false;
+    optimise.dates = [ "12:55" ];
+    # Nix automatically detects files in the store that have identical contents, and replaces them with hard links to a single copy.
+    autoOptimiseStore = true;
+    # maximum number of concurrent tasks during one build
+    buildCores = 4;
+    # maximum number of jobs that Nix will try to build in parallel
+    # "auto" is broken: https://github.com/NixOS/nixpkgs/issues/50623
+    maxJobs = 4;
+    # perform builds in a sandboxed environment
+    useSandbox = true;
+  };
+
+  environment.variables.EDITOR = "vim";
 }
