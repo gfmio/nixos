@@ -2,11 +2,15 @@
 
 This projects contains my nixos vm config.
 
+<https://github.com/angristan/nixos-config/blob/master/configuration.nix>
+
 ## Usage
 
 Install nixos from the boot image and copy the contents of this file to `/etc/nixos/configuration.nix`.
 
 Then run `nixos-rebuild switch`.
+
+Install home-manager and copy the contents of `home.nix` to `$HOME/.config/nixpkgs/home.nix`.
 
 ## Plan
 
