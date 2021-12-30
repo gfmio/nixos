@@ -18,3 +18,13 @@ Then run `nixos-rebuild switch`.
 - Option 2: VM runs with RDP: No display, just exposes an RDP server, SSH for debugging
 - Option 3: VM runs with graphics card embedded: Use nvidia drivers or similar
 - Option 4: Bare metal runtime with access to all devices, use actual drivers or iommu if used as a hypervisor
+
+## To do
+
+- [ ] Split out the main configuration into manageable chunks
+- [ ] Integrate my usual config files
+- [ ] Set up home manager
+- [ ] Configure VS Code, Sublime Text, docker, podman, ...
+- [ ] Have a separate partition for /home
+- [ ] Verify it works on physical devices
+- [ ] xrdp audio support
