@@ -16,7 +16,6 @@ let
 in 
 {
   imports = [
-    <home-manager/nixos>
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
