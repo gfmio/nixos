@@ -26,7 +26,13 @@
   #
 
   xsession.enable = true;
-  xsession.windowManager.command = "i3";
+  # xsession.windowManager.command = "i3";
+  xsession.windowManager.i3 = {
+    enable = true;
+    config = {
+      terminal = "kitty";
+    };
+  };
 
   #
   # VS Code
@@ -73,6 +79,16 @@
   programs.htop = {
     enable = true;
     # Detailed CPU time (System/IO-Wait/Hard-IRQ/Soft-IRQ/Steal/Guest).
-    detailedCpuTime = true;
+    # detailedCpuTime = true;
   };
+
+  programs.zsh.enable = true;
+
+  programs.zsh.oh-my-zsh = {
+    enable = true;
+    theme = "agnoster";
+    plugins = [ "git" "sudo" "docker" "kubectl" ];
+  };
+
 }
+

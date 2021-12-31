@@ -21,7 +21,6 @@ in
     ./hardware-configuration.nix
   ];
 
-
   #
   # Core nixos settings
   #
@@ -179,14 +178,11 @@ in
   # Users
   #
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with `passwd`.
   users.users.gfmio = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  };
-  home-manager.users.gfmio = { pkgs, ... }: {
-    home.packages = [ ];
-    programs.bash.enable = true;
+    extraGroups = [ "wheel" ]; # Enable `sudo` for the user.
+    shell = pkgs.zsh;
   };
 
   #
