@@ -27,8 +27,9 @@ Install home-manager and copy the contents of `home.nix` to `$HOME/.config/nixpk
 
 - [ ] Split out the main configuration into manageable chunks
 - [ ] Integrate my usual config files
-- [ ] Set up home manager
-- [ ] Configure VS Code, Sublime Text, docker, podman, ...
+- [x] Set up home manager
+- [ ] Configure VS Code, Sublime Text, docker, podman, chromium, firefox, ...
 - [ ] Have a separate partition for /home
 - [ ] Verify it works on physical devices
 - [ ] xrdp audio support
+- [x] Ensure that the clipboard works in RDP sessions (I have no idea why though)
