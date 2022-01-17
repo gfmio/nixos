@@ -75,7 +75,6 @@ in
   programs.vscode = {
     enable = true;
     userSettings = {
-      "docker.host" = "ssh://alpine@10.72.81.27";
       "editor.codeActionsOnSave" = {
         "source.fixAll" = true;
         "source.organizeImports" = true;
