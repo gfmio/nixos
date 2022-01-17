@@ -12,6 +12,14 @@ Then run `nixos-rebuild switch`.
 
 Install home-manager and copy the contents of `home.nix` to `$HOME/.config/nixpkgs/home.nix`.
 
+```sh
+# Rebuild system packages
+sudo nixos-rebuild switch
+
+# Rebuild user packages
+home-manager switch
+```
+
 ## Plan
 
 - Create VM base images using packer
