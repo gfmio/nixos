@@ -41,10 +41,22 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      # Some example extensions...
-      dracula-theme.theme-dracula
+      bbenoist.nix
+      dbaeumer.vscode-eslint
+      editorconfig.editorconfig
+      esbenp.prettier-vscode
+      github.codespaces
+      ms-azuretools.vscode-docker
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-toolsai.jupyter
+      ms-toolsai.jupyter-keymap
+      ms-toolsai.jupyter-renderers
+      ms-vscode-remote.remote-containers
+      ms-vscode.hexeditor
+      ms-vscode.sublime-keybindings
       vscodevim.vim
-      yzhang.markdown-all-in-one
+      wholroyd.hcl
     ];
   };
 
