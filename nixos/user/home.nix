@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 
+let
+  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+    inherit pkgs;
+  };
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -32,6 +37,35 @@
     config = {
       terminal = "kitty";
     };
+  };
+
+  #
+  # Chromium
+  #
+
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; } # 1password
+      { id = "bkdgflcldnnnapblkhphbgpggdiikppg"; } # DuckDuckGo Privacy Essentials
+      { id = "ghbmnnjooekpmoecnnnilnnbdlolhkhi"; } # Google Docs Offline
+      { id = "chphlpgkkbolifaimnlloiipkdnihall"; } # OneTab
+      { id = "noonakfaafcdaagngpjehilgegefdima"; } # Vimeo repeat & speed
+    ];
+  };
+
+  # 
+  # Firefox
+  # 
+
+  programs.firefox = {
+    enable = true;
+    extensions = with nur.repos.rycee.firefox-addons; [
+      https-everywhere
+      privacy-badger
+      ublock-origin
+    ];
   };
 
   #
