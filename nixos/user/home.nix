@@ -40,6 +40,29 @@
 
   programs.vscode = {
     enable = true;
+    userSettings = {
+      "editor.fontFamily" = "Hack, Menlo, Monaco, 'Courier New', monospace";
+      "[typescriptreact]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "git.confirmSync" = false;
+      "git.autofetch" = true;
+      "[typescript]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "workbench.startupEditor" = "newUntitledFile";
+      "docker.host" = "ssh://alpine@10.72.81.27";
+      "workbench.editorAssociations" = {
+          "*.ipynb" = "jupyter.notebook.ipynb";
+      };
+      "[html]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "editor.formatOnSave" = true;
+      "[jsonc]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+    };
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
       dbaeumer.vscode-eslint
