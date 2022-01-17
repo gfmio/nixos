@@ -2,8 +2,6 @@
 
 This projects contains my nixos vm config.
 
-<https://github.com/angristan/nixos-config/blob/master/configuration.nix>
-
 ## Usage
 
 Install nixos from the boot image and copy the contents of this file to `/etc/nixos/configuration.nix`.
@@ -41,3 +39,7 @@ home-manager switch
 - [ ] Verify it works on physical devices
 - [ ] xrdp audio support
 - [x] Ensure that the clipboard works in RDP sessions (I have no idea why though)
+
+## Resources
+
+- <https://github.com/angristan/nixos-config/blob/master/configuration.nix>
