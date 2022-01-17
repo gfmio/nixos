@@ -82,6 +82,10 @@
     # detailedCpuTime = true;
   };
 
+  #
+  # zsh
+  #
+
   programs.zsh.enable = true;
 
   programs.zsh.oh-my-zsh = {
@@ -89,6 +93,4 @@
     theme = "agnoster";
     plugins = [ "git" "sudo" "docker" "kubectl" ];
   };
-
 }
-

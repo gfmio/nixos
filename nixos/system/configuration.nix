@@ -177,8 +177,10 @@ in
   # Users
   #
 
-  # Define a user account. Don't forget to set a password with `passwd`.
+  users.users.root.initialPassword = "root";
+
   users.users.gfmio = {
+    initialPassword = "password";
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable `sudo` for the user.
     shell = pkgs.zsh;
