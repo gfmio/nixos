@@ -41,26 +41,34 @@
   programs.vscode = {
     enable = true;
     userSettings = {
-      "editor.fontFamily" = "Hack, Menlo, Monaco, 'Courier New', monospace";
-      "[typescriptreact]" = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "docker.host" = "ssh://alpine@10.72.81.27";
+      "editor.codeActionsOnSave" = {
+        "source.fixAll" = true;
+        "source.organizeImports" = true;
       };
+      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "editor.fontFamily" = "Hack, Menlo, Monaco, 'Courier New', monospace";
+      "editor.formatOnSave" = true;
       "git.confirmSync" = false;
       "git.autofetch" = true;
-      "[typescript]" = {
-          "editor.defaultFormatter" = "esbenp.prettier-vscode";
-      };
       "workbench.startupEditor" = "newUntitledFile";
-      "docker.host" = "ssh://alpine@10.72.81.27";
       "workbench.editorAssociations" = {
-          "*.ipynb" = "jupyter.notebook.ipynb";
+        "*.ipynb" = "jupyter.notebook.ipynb";
       };
       "[html]" = {
-          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
-      "editor.formatOnSave" = true;
+      "[json]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
       "[jsonc]" = {
-          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[typescript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[typescriptreact]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
     };
     extensions = with pkgs.vscode-extensions; [
@@ -88,10 +96,22 @@
         sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
       }
       {
+        name = "vscode-markdownlint";
+        publisher = "DavidAnson";
+        version = "0.45.0";
+        sha256 = "1vci6pv1f9qr5g6yd9g208cj6gwisrg4lwcvv2sw833mrhpbxg1g";
+      }
+      {
         name = "vscode-eslint";
         publisher = "dbaeumer";
         version = "2.2.3";
         sha256 = "0sl9d85wbac3h79a5y5mcv0rhcz8azcamyiiyix0b7klcr80v56d";
+      }
+      {
+        name = "gitlens";
+        publisher = "eamodio";
+        version = "11.7.0";
+        sha256 = "0apjjlfdwljqih394ggz2d8m599pyyjrb0b4cfcz83601b7hk3x6";
       }
       {
         name = "EditorConfig";
