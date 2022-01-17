@@ -254,6 +254,13 @@ in
     # Create a `docker` alias for podman, to use it as a drop-in replacement
     dockerCompat = false;
   };
+
+  #
+  # gvfs (for nautlius)
+  #
+
+  services.gvfs.enable = true;
+
   #
   # System packages 
   #
@@ -276,6 +283,10 @@ in
     arandr
     dex
     xss-lock
+    gnome3.adwaita-icon-theme
+    gnomeExtensions.appindicator
+    gnome3.gnome-settings-daemon
+    gnome3.nautilus
   ];
 
   fonts = {
