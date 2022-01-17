@@ -34,10 +34,25 @@ home-manager switch
 - [ ] Split out the main configuration into manageable chunks
 - [ ] Integrate my usual config files
 - [x] Set up home manager
-- [ ] Configure VS Code, Sublime Text, docker, podman, chromium, firefox, ...
+- [x] Configure common utilities
+  - [x] VS Code
+    - [x] Extensions
+    - [x] Settings
+  - [x] Sublime Text
+  - [x] docker
+  - [x] podman
+  - [x] chromium
+    - [x] extensions
+    - [ ] settings
+  - [x] firefox
+    - [ ] extensions
+    - [ ] settings
 - [ ] Have a separate partition for /home
 - [ ] Verify it works on physical devices
-- [ ] xrdp audio support
+- [ ] xrdp
+  - [x] basic support
+  - [x] clipboard support
+  - [ ] audio support
 - [x] Ensure that the clipboard works in RDP sessions (I have no idea why though)
 
 ## Resources
