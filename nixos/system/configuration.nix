@@ -7,7 +7,7 @@
 with lib;
 
 let
-  nvidia = false;
+  nvidia = true;
   qemu = false;
   sway = false;
   gnome = false;
