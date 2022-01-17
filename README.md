@@ -58,3 +58,5 @@ home-manager switch
 ## Resources
 
 - <https://github.com/angristan/nixos-config/blob/master/configuration.nix>
+- <https://github.com/msfjarvis/dotfiles/blob/main/nixos/home-manager.nix>
+- 
