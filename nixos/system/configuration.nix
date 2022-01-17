@@ -182,7 +182,7 @@ in
   users.users.gfmio = {
     initialPassword = "password";
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable `sudo` for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable `sudo` for the user.
     shell = pkgs.zsh;
   };
 
@@ -239,6 +239,21 @@ in
   };
   # networking.firewall.allowedTCPPorts = [ 3389 ];
 
+  #
+  # Docker
+  #
+
+  virtualisation.docker.enable = true;
+
+  #
+  # Podman
+  #
+
+  virtualisation.podman = {
+    enable = true;
+    # Create a `docker` alias for podman, to use it as a drop-in replacement
+    dockerCompat = false;
+  };
   #
   # System packages 
   #
