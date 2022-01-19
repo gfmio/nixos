@@ -111,7 +111,7 @@ in
 
   # Drivers
 
-  services.xserver.videoDrivers = if nvidia then [ "nvidia"  "modesetting" "fbdev" ] else mkIf qemu [ "qxl" "modesetting" "fbdev"  ];
+  services.xserver.videoDrivers = if nvidia then [ "nvidia" ] else mkIf qemu [ "qxl" "modesetting" "fbdev"  ];
 
   hardware.nvidia.modesetting.enable = nvidia;
 
