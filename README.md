@@ -54,9 +54,9 @@ home-manager switch
   - [x] clipboard support
   - [ ] audio support
 - [x] Ensure that the clipboard works in RDP sessions (I have no idea why though)
+- [x] RDP and VNC client
 
 ## Resources
 
 - <https://github.com/angristan/nixos-config/blob/master/configuration.nix>
 - <https://github.com/msfjarvis/dotfiles/blob/main/nixos/home-manager.nix>
-- 
