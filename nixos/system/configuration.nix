@@ -12,7 +12,7 @@ let
   sway = false;
   gnome = false;
   gdm = true;
-  xrdp = false;
+  xrdp = true;
   i3 = true;
 in 
 {
