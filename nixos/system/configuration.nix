@@ -125,9 +125,14 @@ in
   # GNOME
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = gnome;
+  services.xserver.displayManager.gdm.enable = gdm;
+  # services.xserver.displayManager.gdm.nvidiaWayland = nvidia;
+  services.xserver.displayManager.gdm.nvidiaWayland = false;
+  services.xserver.displayManager.gdm.wayland = false;
+
+  services.xserver.displayManager.lightdm.enable = !gdm;
+
   services.xserver.desktopManager.gnome.enable = gnome;
-  services.xserver.displayManager.gdm.nvidiaWayland = nvidia;
 
   #
   # Sway
