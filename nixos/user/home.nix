@@ -30,6 +30,16 @@ in
   # X session
   #
 
+  xresources.properties = {
+    "Xft.dpi" = 192;
+    "Xft.autohint" = 0;
+    "Xft.lcdfilter" = "lcddefault";
+    "Xft.hintstyle" = "hintfull";
+    "Xft.hinting" = 1;
+    "Xft.antialias" = 1;
+    "Xft.rgba" = "rgb";
+  };
+
   xsession.enable = true;
   # xsession.windowManager.command = "i3";
   xsession.windowManager.i3 = {
@@ -119,7 +129,7 @@ in
       # "ms-vscode-remote.remote-containers"
       # "ms-vscode.hexeditor"
       # "ms-vscode.sublime-keybindings"
-      vscodevim.vim
+      # vscodevim.vim
       # "wholroyd.hcl"
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -218,12 +228,12 @@ in
         version = "4.0.10";
         sha256 = "0l8z0sv3432qrzh6118km7xr7g93fajmjihw8md47kfsdl9c4xxg";
       }
-      {
-        name = "vim";
-        publisher = "vscodevim";
-        version = "1.21.10";
-        sha256 = "0c9m7mc2kmfzj3hkwq3d4hj43qha8a75q5r1rdf1xfx8wi5hhb1n";
-      }
+      # {
+      #   name = "vim";
+      #   publisher = "vscodevim";
+      #   version = "1.21.10";
+      #   sha256 = "0c9m7mc2kmfzj3hkwq3d4hj43qha8a75q5r1rdf1xfx8wi5hhb1n";
+      # }
       {
         name = "HCL";
         publisher = "wholroyd";
