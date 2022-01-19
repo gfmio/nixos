@@ -291,6 +291,7 @@ in
     gnomeExtensions.appindicator
     gnome3.gnome-settings-daemon
     gnome3.nautilus
+    remmina
   ];
 
   fonts = {
