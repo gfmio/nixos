@@ -11,7 +11,8 @@ let
   qemu = false;
   sway = false;
   gnome = false;
-  xrdp = true;
+  gdm = true;
+  xrdp = false;
   i3 = true;
 in 
 {
