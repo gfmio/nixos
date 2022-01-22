@@ -12,8 +12,8 @@ in
     modules = {
       git = {
         enable = mkOption { type = types.bool; default = false; };
-        name = mkOption { type = types.string; default = "Frédérique Mittelstaedt"; };
-        email = mkOption { type = types.string; };
+        name = mkOption { type = types.str; default = "Frédérique Mittelstaedt"; };
+        email = mkOption { type = types.str; };
       };
     };
   };
