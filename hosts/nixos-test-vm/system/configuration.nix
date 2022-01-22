@@ -1,7 +1,5 @@
 { config, pkgs, lib, ... }:
 
-with lib;
-
 {
   imports = [
     ./hardware-configuration.nix
