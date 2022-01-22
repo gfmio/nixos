@@ -29,6 +29,8 @@
   # Modules
   #
 
+  modules.firefox.enable = true;
+
   #
   # X session
   #
