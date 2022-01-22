@@ -7,7 +7,7 @@
 with lib;
 
 let
-  cfg = config.modules.security;
+  cfg = config.modules.networking;
 in
 {
   imports = [];
