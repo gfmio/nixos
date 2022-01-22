@@ -35,6 +35,7 @@
     };
     networking = {
       enable = true;
+      hostname = "gfmio-nixos";
       # TODO: Ethernet adapters, wireless, firewall
     };
     i18n = {
