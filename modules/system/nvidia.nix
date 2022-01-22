@@ -27,7 +27,7 @@ in
     boot.initrd.availableKernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
 
     # Drivers
-    services.xserver.videoDrivers = [ "nvidia" ]
+    services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia.modesetting.enable = true;
 
     # GDM
