@@ -21,7 +21,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    services.xrdp = mkIf xrdp {
+    services.xrdp = {
       enable = true;
       # TODO: Make this configurable
       defaultWindowManager = "i3";
