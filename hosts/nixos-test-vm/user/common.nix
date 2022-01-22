@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
-let
-  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-    inherit pkgs;
-  };
-in
 {
+  #
+  # Home manager
+  #
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "gfmio";
@@ -25,6 +24,10 @@ in
   programs.home-manager.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+
+  #
+  # Modules
+  #
 
   #
   # X session
@@ -65,18 +68,10 @@ in
     ];
   };
 
-  # 
+  #
   # Firefox
-  # 
+  #
 
-  programs.firefox = {
-    enable = true;
-    extensions = with nur.repos.rycee.firefox-addons; [
-      https-everywhere
-      privacy-badger
-      ublock-origin
-    ];
-  };
 
   #
   # VS Code

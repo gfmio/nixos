@@ -1,10 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, lib, ... }:
-
-with lib;
+{ config, lib, pkgs, ... }:
 
 let
   nvidia = true;
@@ -14,13 +8,8 @@ let
   gdm = true;
   xrdp = true;
   i3 = true;
-in 
+in
 {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
-
   #
   # Core nixos settings
   #
@@ -32,8 +21,9 @@ in
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.11"; # Did you read the comment?
 
-  nixpkgs.config.allowUnfree = true;
-
+  #
+  # Modules
+  #
   #
   # Boot configuration
   #
@@ -85,7 +75,7 @@ in
   networking.firewall.enable = false;
 
   #
-  # Internationalisation 
+  # Internationalisation
   #
 
   # Select internationalisation properties.
@@ -103,7 +93,7 @@ in
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # 
+  #
   # X window system
   #
 
@@ -198,9 +188,9 @@ in
 
   services.printing.enable = true;
 
-  # 
+  #
   # SSH
-  # 
+  #
 
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "no";
@@ -229,10 +219,10 @@ in
   services.qemuGuest.enable = qemu;
   services.spice-vdagentd.enable = qemu;
 
-  # 
+  #
   # Pipewire
   #
- 
+
   services.pipewire.enable = true;
 
   #
@@ -268,7 +258,7 @@ in
   services.gvfs.enable = true;
 
   #
-  # System packages 
+  # System packages
   #
 
   # List packages installed in system profile. To search, run:
