@@ -23,6 +23,6 @@ in
 
   config = mkIf cfg.enable {
     services.openssh.enable = true;
-    services.openssh.permitRootLogin = cfg.permitRootLogin;
+    services.openssh.permitRootLogin = if cfg.permitRootLogin then "yes" else "no";
   };
 }
