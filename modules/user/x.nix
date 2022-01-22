@@ -19,7 +19,7 @@ in
 
   config = mkIf cfg.enable {
     xresources.properties = {
-      "Xft.dpi" = 96 * cfg.scale;
+      "Xft.dpi" = builtins.floor (96 * cfg.scale);
       "Xft.autohint" = 0;
       "Xft.lcdfilter" = "lcddefault";
       "Xft.hintstyle" = "hintfull";
@@ -27,7 +27,6 @@ in
       "Xft.antialias" = 1;
       "Xft.rgba" = "rgb";
     };
-
     xsession.enable = true;
   };
 }

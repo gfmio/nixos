@@ -30,7 +30,7 @@
   #
 
   modules.x.enable = true;
-  modules.x.scale = 2;
+  modules.x.scale = 2.0;
 
   modules.i3.enable = true;
 
