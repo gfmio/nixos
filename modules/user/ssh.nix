@@ -3,14 +3,14 @@
 with lib;
 
 let
-  cfg = config.modules.git;
+  cfg = config.modules.ssh;
 in
 {
   imports = [];
 
   options = {
     modules = {
-      git = {
+      ssh = {
         enable = mkOption { type = types.bool; default = false; };
       };
     };

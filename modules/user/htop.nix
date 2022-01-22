@@ -3,14 +3,14 @@
 with lib;
 
 let
-  cfg = config.modules.git;
+  cfg = config.modules.htop;
 in
 {
   imports = [];
 
   options = {
     modules = {
-      git = {
+      htop = {
         enable = mkOption { type = types.bool; default = false; };
       };
     };
