@@ -22,7 +22,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    services.xserver.displayManager.gdm.enable = cfg.displayManager == "gdm";
-    services.xserver.displayManager.lightdm.enable = cfg.displayManager == "lightdm";
+    services.xserver.displayManager.gdm.enable = (cfg.displayManager == "gdm");
+    services.xserver.displayManager.lightdm.enable = (cfg.displayManager == "lightdm");
   };
 }
