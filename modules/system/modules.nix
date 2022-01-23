@@ -5,6 +5,7 @@
     ./nix.nix
     ./boot.nix
     ./kernel.nix
+    ./system.nix
     ./hardware/hardware.nix
     ./time.nix
     ./security.nix
@@ -21,7 +22,6 @@
     ./cups.nix
     ./ssh.nix
     ./gpg.nix
-    ./mtr.nix
     ./pipewire.nix
     ./xrdp.nix
     ./docker.nix

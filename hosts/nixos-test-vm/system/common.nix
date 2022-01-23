@@ -36,6 +36,9 @@
     kernel = {
       enable = true;
     };
+    system = {
+      enable = true;
+    };
     time = {
       enable = true;
     };
@@ -84,9 +87,6 @@
       passwordAuthentication = true;
     };
     gpg = {
-      enable = true;
-    };
-    mtr = {
       enable = true;
     };
     pipewire = {
