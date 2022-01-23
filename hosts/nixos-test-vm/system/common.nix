@@ -39,6 +39,9 @@
     system = {
       enable = true;
     };
+    smart = {
+      enable = false;
+    };
     time = {
       enable = true;
     };

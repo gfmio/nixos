@@ -8,6 +8,7 @@
     ./system.nix
     ./hardware/hardware.nix
     ./time.nix
+    ./smart.nix
     ./security.nix
     ./networking.nix
     ./i18n.nix
