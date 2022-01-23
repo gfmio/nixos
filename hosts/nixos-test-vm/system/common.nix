@@ -200,12 +200,6 @@
   # # Don't power up the default Bluetooth controller on boot
   # hardware.bluetooth.powerOnBoot = false;
 
-  # # services.xserver.layout = "fr";
-  # # services.xserver.xkbOptions = "eurosign:e";
-
-  # # Enable touchpad support.
-  # services.xserver.libinput.enable = true;
-
   # environment.gnome3.excludePackages = with pkgs.gnome3; [
   #   epiphany
   #   evolution
@@ -222,12 +216,6 @@
   # # this is required for mounting android phones
   # # over mtp://
   # services.gvfs.enable = true;
-
-  # # Disable mutable users.
-  # #users.mutableUsers = false;
-
-  # # Use zsh by default for all users
-  # users.defaultUserShell = pkgs.zsh;
 
   # # # Syncthing service config
 

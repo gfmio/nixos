@@ -21,6 +21,12 @@ in
   };
 
   config = mkIf cfg.enable {
+    # Disable mutable users.
+    # users.mutableUsers = false;
+
+    # Use zsh by default for all users
+    users.defaultUserShell = pkgs.zsh;
+
     users.users.root.initialPassword = "root";
 
     users.users.gfmio = {
