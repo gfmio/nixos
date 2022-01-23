@@ -21,6 +21,13 @@ in
   };
 
   config = mkIf cfg.enable {
-    virtualisation.docker.enable = true;
+    virtualisation.docker = {
+      enable = true;
+      # Run docker system prune -f periodically
+      autoPrune.enable = true;
+      autoPrune.dates = "weekly";
+      # Don't start the service at boot, use systemd socket activation
+      enableOnBoot = false;
+    };
   };
 }
