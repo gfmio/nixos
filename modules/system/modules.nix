@@ -4,6 +4,7 @@
   imports = [
     ./nix.nix
     ./boot.nix
+    ./kernel.nix
     ./hardware/hardware.nix
     ./time.nix
     ./security.nix

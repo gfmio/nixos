@@ -33,6 +33,9 @@
     boot = {
       enable = true;
     };
+    kernel = {
+      enable = true;
+    };
     time = {
       enable = true;
     };
@@ -109,63 +112,6 @@
     };
   };
 
-  # # Use latest kernel
-  # # boot.kernelPackages will use linuxPackages by default, so no need to define it
-  # nixpkgs.config.packageOverrides = in_pkgs :
-  #   {
-  #     linuxPackages = in_pkgs.linuxPackages_latest;
-  #   };
-  # # No access time and continuous TRIM for SSD
-  # fileSystems."/".options = [ "noatime" "discard" ];
-  # # If non-empty, write log messages to the specified TTY device.
-  # services.journald.console = "/dev/tty12";
-  # # Enable Kernel same-page merging
-  # hardware.ksm.enable = true;
-
-  # # Sysctl params
-  # boot.kernel.sysctl = {
-  #   "fs.inotify.max_user_watches" = 524288; # Allow VS Code to watch more files
-  # };
-
-
-  # # Check S.M.A.R.T status of all disks and notify in case of errors
-  # services.smartd = {
-  #   enable = true;
-  #   # Monitor all devices connected to the machine at the time it's being started
-  #   autodetect = true;
-  #   notifications = {
-  #     x11.enable = if config.services.xserver.enable then true else false;
-  #     wall.enable = true; # send wall notifications to all users
-  #   };
-  # };
-
-  # # Enable entropy daemon which refills /dev/random when low
-  # services.haveged.enable = true;
-
-  # # Add the NixOS Manual on virtual console 8
-  # services.nixosManual.showManual = true;
-
-  # # Install + setcap
-  # programs.iftop.enable = true;
-  # programs.iotop.enable = true;
-  # programs.mtr.enable = true;
-
-  # # Thermals and cooling
-  # services.thermald.enable = true;
-  # # This includes support for suspend-to-RAM and powersave features on laptops
-  # powerManagement.enable = true;
-  # # Enable powertop auto tuning on startup.
-  # powerManagement.powertop.enable = false;
-  # # IDK if TLP is useful/conflicts with powerManagement
-  # services.tlp.enable = false;
-  # services.tlp.extraConfig = "USB_AUTOSUSPEND=0";
-
-  # # Install LXD
-  # virtualisation.lxd.enable = true;
-  # # Install VB
-  # virtualisation.virtualbox.host.enable = true;
-  # # Libvirtd (Qemu)
-  # virtualisation.libvirtd.enable = true;
 
   # # Periodically update the database of files used by the locate command
   # services.locate.enable = true;
@@ -256,7 +202,6 @@
   # # tlp.enable = true;
   # # udisks2.enable = true;
   # # printing.enable = true;
-
 
   # # system packages
   # # environment.systemPackages = with pkgs; with qt5; with libsForQt5; with plasma5; with kdeApplications; [
