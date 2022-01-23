@@ -59,8 +59,6 @@ in
 
     # Network usage statistics
     services.vnstat.enable = true;
-
-    networking.wicd.enable = false;
   };
 }
 
