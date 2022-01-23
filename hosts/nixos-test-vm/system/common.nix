@@ -143,18 +143,13 @@
     bluetooth = {
       enable = false;
     };
+    syncthing = {
+      enable = false;
+    };
   };
 
 
   # # # Syncthing service config
-
-  # # syncthing = {
-  # #   enable = true;
-	# #   useInotify = true;
-	# #   all_proxy = null;
-  # #   dataDir = "/home/eddie/.syncthing";
-  # #   user = "eddie";
-  # # };
 
   # # ## DNSCrypt + DNSMasq
 
@@ -186,9 +181,7 @@
   # #   latitude = "53.5615";
   # #   longitude = ".3268";
   # # };
-  # # tlp.enable = true;
   # # udisks2.enable = true;
-  # # printing.enable = true;
 
   # # system packages
   # # environment.systemPackages = with pkgs; with qt5; with libsForQt5; with plasma5; with kdeApplications; [

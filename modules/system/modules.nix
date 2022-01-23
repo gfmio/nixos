@@ -40,5 +40,6 @@
     ./gnome-keyring.nix
     ./netdata.nix
     ./bluetooth.nix
+    ./syncthing.nix
   ];
 }
