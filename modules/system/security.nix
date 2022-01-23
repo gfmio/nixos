@@ -23,5 +23,7 @@ in
   config = mkIf cfg.enable {
     # Disable sudo password for the wheel group
     security.sudo.wheelNeedsPassword = false;
+
+    security.apparmor.enable = true;
   };
 }
