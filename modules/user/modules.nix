@@ -12,5 +12,6 @@
     ./git.nix
     ./ssh.nix
     ./htop.nix
+    ./tmux.nix
   ];
 }
