@@ -101,6 +101,9 @@
     packages = {
       enable = true;
     };
+    restic = {
+      enable = false;
+    };
   };
 
   # # Use latest kernel

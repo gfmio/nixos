@@ -65,8 +65,5 @@
     tmux = {
       enable = true;
     };
-    restic = {
-      enable = false;
-    };
   };
 }

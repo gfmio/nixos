@@ -29,5 +29,6 @@
     ./podman.nix
     ./fonts.nix
     ./packages.nix
+    ./restic.nix
   ];
 }
