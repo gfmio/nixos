@@ -9,6 +9,7 @@
     ./hardware/hardware.nix
     ./time.nix
     ./smart.nix
+    ./thermal.nix
     ./security.nix
     ./networking.nix
     ./i18n.nix

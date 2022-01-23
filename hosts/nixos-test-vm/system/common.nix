@@ -42,6 +42,9 @@
     smart = {
       enable = false;
     };
+    thermal = {
+      enable = false;
+    };
     time = {
       enable = true;
     };
