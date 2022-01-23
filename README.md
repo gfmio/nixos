@@ -31,7 +31,7 @@ home-manager switch
 
 ## To do
 
-- [ ] Split out the main configuration into manageable chunks
+- [x] Split out the main configuration into manageable chunks
 - [ ] Integrate my usual config files
 - [x] Set up home manager
 - [x] Configure common utilities
@@ -55,6 +55,8 @@ home-manager switch
   - [ ] audio support
 - [x] Ensure that the clipboard works in RDP sessions (I have no idea why though)
 - [x] RDP and VNC client
+- [ ] Backups
+- [ ] Disk encryption
 
 ## Resources
 
