@@ -18,6 +18,9 @@
 
   modules = {
     # Enable nvidia, qemu or neither
+    intel = {
+      enable = false;
+    };
     nvidia = {
       enable = true;
     };

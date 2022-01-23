@@ -4,6 +4,7 @@
   imports = [
     ./nix.nix
     ./boot.nix
+    ./intel.nix
     ./nvidia.nix
     ./qemu.nix
     ./time.nix
