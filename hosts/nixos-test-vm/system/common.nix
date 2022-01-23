@@ -75,6 +75,7 @@
     ssh = {
       enable = true;
       permitRootLogin = false;
+      passwordAuthentication = true;
     };
     gpg = {
       enable = true;
