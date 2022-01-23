@@ -11,6 +11,7 @@
     ./networking.nix
     ./i18n.nix
     ./sound.nix
+    ./x.nix
     ./displayManager.nix
     ./gnome.nix
     ./sway.nix
