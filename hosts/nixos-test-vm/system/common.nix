@@ -128,15 +128,11 @@
     restic = {
       enable = false;
     };
+    flatpak = {
+      enable = true;
+    };
   };
 
-
-  # # Periodically update the database of files used by the locate command
-  # services.locate.enable = true;
-
-  # # Enable Flatpak
-  # #services.flatpak.enable = true
-  # # No snap yet: https://github.com/NixOS/nixpkgs/issues/30336
 
   # # Enable ClamAV, an open source antivirus engine
   # #services.clamav.daemon.enable = true;
@@ -172,10 +168,6 @@
   # # Enable Chrome GNOME Shell native host connector
   # # This is a DBus service allowing to install GNOME Shell extensions from a web browser.
   # services.gnome3.chrome-gnome-shell.enable = true;
-
-  # # this is required for mounting android phones
-  # # over mtp://
-  # services.gvfs.enable = true;
 
   # # # Syncthing service config
 

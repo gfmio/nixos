@@ -35,5 +35,6 @@
     ./fonts.nix
     ./packages.nix
     ./restic.nix
+    ./flatpak.nix
   ];
 }
