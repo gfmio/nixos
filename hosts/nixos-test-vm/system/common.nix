@@ -116,6 +116,9 @@
     libvirt = {
       enable = true;
     };
+    virtualbox = {
+      enable = true;
+    };
     fonts = {
       enable = true;
     };

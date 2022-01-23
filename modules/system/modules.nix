@@ -31,6 +31,7 @@
     ./podman.nix
     ./lxd.nix
     ./libvirt.nix
+    ./virtualbox.nix
     ./fonts.nix
     ./packages.nix
     ./restic.nix
