@@ -110,6 +110,9 @@
     podman = {
       enable = true;
     };
+    lxd = {
+      enable = true;
+    };
     fonts = {
       enable = true;
     };

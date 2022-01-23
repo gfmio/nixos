@@ -29,6 +29,7 @@
     ./xrdp.nix
     ./docker.nix
     ./podman.nix
+    ./lxd.nix
     ./fonts.nix
     ./packages.nix
     ./restic.nix
