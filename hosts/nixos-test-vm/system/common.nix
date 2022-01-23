@@ -137,26 +137,11 @@
     gnome-keyring = {
       enable = true;
     };
+    netdata = {
+      enable = true;
+    };
   };
 
-
-
-  # # Monitoring
-  # services.netdata = {
-  #  enable = true;
-  #  config = {
-  #    global = {
-  #      "default port" = "19999";
-  #      "bind to" = "127.0.0.1";
-  #    };
-  #  };
-  # };
-
-  # # Bluetooth
-  # # https://nixos.wiki/wiki/Bluetooth
-  # hardware.bluetooth.enable = false;
-  # # Don't power up the default Bluetooth controller on boot
-  # hardware.bluetooth.powerOnBoot = false;
 
   # # # Syncthing service config
 

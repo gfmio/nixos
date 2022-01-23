@@ -38,5 +38,6 @@
     ./flatpak.nix
     ./clamav.nix
     ./gnome-keyring.nix
+    ./netdata.nix
   ];
 }
