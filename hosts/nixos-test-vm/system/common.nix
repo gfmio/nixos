@@ -140,6 +140,9 @@
     netdata = {
       enable = true;
     };
+    bluetooth = {
+      enable = false;
+    };
   };
 
 

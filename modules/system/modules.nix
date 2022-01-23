@@ -39,5 +39,6 @@
     ./clamav.nix
     ./gnome-keyring.nix
     ./netdata.nix
+    ./bluetooth.nix
   ];
 }
