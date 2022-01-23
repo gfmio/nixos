@@ -7,15 +7,17 @@
 with lib;
 
 let
-  cfg = config.modules.nvidia;
+  cfg = config.modules.hardware.nvidia;
 in
 {
   imports = [];
 
   options = {
     modules = {
-      nvidia = {
-        enable = mkOption { type = types.bool; default = false; };
+      hardware = {
+        nvidia = {
+          enable = mkOption { type = types.bool; default = false; };
+        };
       };
     };
   };

@@ -17,15 +17,17 @@
   #
 
   modules = {
-    # Enable nvidia, qemu or neither
-    intel = {
-      enable = false;
-    };
-    nvidia = {
-      enable = true;
-    };
-    qemu = {
-      enable = false;
+    hardware = {
+      # Enable nvidia, qemu or neither
+      intel = {
+        enable = false;
+      };
+      nvidia = {
+        enable = true;
+      };
+      qemu = {
+        enable = false;
+      };
     };
     boot = {
       enable = true;
@@ -119,18 +121,11 @@
   # # Enable Kernel same-page merging
   # hardware.ksm.enable = true;
 
-  # # Enable all the firmware
-  # hardware.enableAllFirmware = true;
-  # # Enable all the firmware with a license allowing redistribution. (i.e. free firmware and firmware-linux-nonfree)
-  # hardware.enableRedistributableFirmware = true;
-
   # # Sysctl params
   # boot.kernel.sysctl = {
   #   "fs.inotify.max_user_watches" = 524288; # Allow VS Code to watch more files
   # };
 
-  # # A DBus service that allows applications to update firmware
-  # services.fwupd.enable = true;
 
   # # Check S.M.A.R.T status of all disks and notify in case of errors
   # services.smartd = {

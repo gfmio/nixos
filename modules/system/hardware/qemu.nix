@@ -7,15 +7,17 @@
 with lib;
 
 let
-  cfg = config.modules.qemu;
+  cfg = config.modules.hardware.qemu;
 in
 {
   imports = [];
 
   options = {
     modules = {
-      qemu = {
-        enable = mkOption { type = types.bool; default = false; };
+      hardware = {
+        qemu = {
+          enable = mkOption { type = types.bool; default = false; };
+        };
       };
     };
   };

@@ -25,9 +25,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    hardware.opengl.enable = true;
-    hardware.opengl.driSupport = true;
-
     # Enable the X11 windowing system.
     services.xserver.enable = true;
 

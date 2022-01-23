@@ -7,15 +7,17 @@
 with lib;
 
 let
-  cfg = config.modules.intel;
+  cfg = config.modules.hardware.intel;
 in
 {
   imports = [];
 
   options = {
     modules = {
-      intel = {
-        enable = mkOption { type = types.bool; default = false; };
+      hardware = {
+        intel = {
+          enable = mkOption { type = types.bool; default = false; };
+        };
       };
     };
   };
