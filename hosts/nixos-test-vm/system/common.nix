@@ -113,6 +113,9 @@
     lxd = {
       enable = true;
     };
+    libvirt = {
+      enable = true;
+    };
     fonts = {
       enable = true;
     };

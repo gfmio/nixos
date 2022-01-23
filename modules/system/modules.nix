@@ -30,6 +30,7 @@
     ./docker.nix
     ./podman.nix
     ./lxd.nix
+    ./libvirt.nix
     ./fonts.nix
     ./packages.nix
     ./restic.nix
