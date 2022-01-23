@@ -41,6 +41,17 @@ in
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     networking.networkmanager.enable = true;
+
+    # Simple stateful dual-stack firewall
+    networking.firewall = {
+      enable = true;
+      allowPing = true;
+      allowedTCPPorts = [];
+      allowedUDPPorts = [];
+      logRefusedConnections = true;
+      checkReversePath = false; # for libvirtd
+    };
+
   };
 }
 
