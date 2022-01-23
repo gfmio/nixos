@@ -279,10 +279,6 @@
   # # ++builtins.filter lib.isDerivation (builtins.attrValues pkgs.plasma5)
   # # ++builtins.filter lib.isDerivation (builtins.attrValues pkgs.kdeApplications);
 
-  # environment.systemPackages = with pkgs; [
-  #   gitAndTools.diff-so-fancy
-  # ];
-
   # # # List packages installed in system profile.
   # # environment.systemPackages = with pkgs; [
   # #   # Utils

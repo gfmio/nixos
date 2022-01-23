@@ -30,6 +30,7 @@ in
     environment.systemPackages = with pkgs; [
       vim
       git
+      gitAndTools.diff-so-fancy
       wget
       gcc
       pkg-config
