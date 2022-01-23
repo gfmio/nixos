@@ -21,7 +21,13 @@ in
   };
 
   config = mkIf cfg.enable {
-    i18n.defaultLocale = "en_US.UTF-8";
+    i18n = {
+      font = "Lat2-Terminus16";
+      # consoleFont = "latarcyrheb-sun32"; # Big console font for HiDPI
+      # consoleKeyMap = "fr";
+      defaultLocale = "en_US.UTF-8";
+    };
+
     # console = {
     #   font = "Lat2-Terminus16";
     #   keyMap = "us";
