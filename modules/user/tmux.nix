@@ -19,7 +19,7 @@ in
   config = mkIf cfg.enable {
     programs.tmux = {
       enable = true;
-      extraTmuxConf = ''
+      extraConfig = ''
         # More history
         set -g history-limit 100000
         # Windows start at 1
