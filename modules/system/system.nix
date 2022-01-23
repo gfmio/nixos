@@ -35,5 +35,8 @@ in
 
     # Enable entropy daemon which refills /dev/random when low
     services.haveged.enable = true;
+
+    # Periodically update the database of files used by the locate command
+    services.locate.enable = true;
   };
 }
