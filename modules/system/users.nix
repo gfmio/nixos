@@ -24,10 +24,12 @@ in
     users.users.root.initialPassword = "root";
 
     users.users.gfmio = {
+      description = "Frédérique Mittelstaedt";
       initialPassword = "password";
       isNormalUser = true;
-      extraGroups = [ "wheel" "docker" ]; # Enable `sudo` for the user.
+      extraGroups = [ "wheel" "docker" "lxd" "libvirtd" "networkmanager" ]; # Enable `sudo` for the user.
       shell = pkgs.zsh;
+      #packages = [];
     };
   };
 }
