@@ -16,6 +16,10 @@ in
     modules = {
       x = {
         enable = mkOption { type = types.bool; default = false; };
+        enableLibInput = mkOption { type = types.bool; default = true; };
+        enableSynaptics = mkOption { type = types.bool; default = true; };
+        xkbLayout = mkOption { type = types.str; default = "us"; };
+        xkbOptions = mkOption { type = types.str; default = ""; };
       };
     };
   };
@@ -28,10 +32,12 @@ in
     services.xserver.enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
-    # services.xserver.libinput.enable = true;
+    services.xserver.libinput.enable = cfg.enableLibInput;
 
     # Configure keymap in X11
-    # services.xserver.layout = "us";
-    # services.xserver.xkbOptions = "eurosign:e";
+    services.xserver.layout = cfg.xkbLayout;
+    services.xserver.xkbOptions = cfg.xkbOptions;
+
+    services.xserver.synaptics.enable = cfg.enableSynaptics;
   };
 }
