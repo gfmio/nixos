@@ -37,5 +37,6 @@
     ./restic.nix
     ./flatpak.nix
     ./clamav.nix
+    ./gnome-keyring.nix
   ];
 }

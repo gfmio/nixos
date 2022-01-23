@@ -134,6 +134,9 @@
     clamav = {
       enable = false;
     };
+    gnome-keyring = {
+      enable = true;
+    };
   };
 
 
@@ -154,19 +157,6 @@
   # hardware.bluetooth.enable = false;
   # # Don't power up the default Bluetooth controller on boot
   # hardware.bluetooth.powerOnBoot = false;
-
-  # environment.gnome3.excludePackages = with pkgs.gnome3; [
-  #   epiphany
-  #   evolution
-  #   gnome-maps
-  #   accerciser
-  # ];
-
-  # # Enable GNOME Keyring daemon
-  # services.gnome3.gnome-keyring.enable = true;
-  # # Enable Chrome GNOME Shell native host connector
-  # # This is a DBus service allowing to install GNOME Shell extensions from a web browser.
-  # services.gnome3.chrome-gnome-shell.enable = true;
 
   # # # Syncthing service config
 
