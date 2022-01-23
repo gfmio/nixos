@@ -44,6 +44,9 @@
     sound = {
       enable = true;
     };
+    x = {
+      enable = true;
+    };
     displayManager = {
       enable = true;
       displayManager = "gdm";
