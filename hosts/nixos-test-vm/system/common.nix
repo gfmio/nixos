@@ -45,6 +45,9 @@
     thermal = {
       enable = false;
     };
+    power = {
+      enable = false;
+    };
     time = {
       enable = true;
     };
