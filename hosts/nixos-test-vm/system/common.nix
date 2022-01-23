@@ -131,13 +131,12 @@
     flatpak = {
       enable = true;
     };
+    clamav = {
+      enable = false;
+    };
   };
 
 
-  # # Enable ClamAV, an open source antivirus engine
-  # #services.clamav.daemon.enable = true;
-  # # Enable ClamAV freshclam updater.
-  # #services.clamav.updater.enable = true;
 
   # # Monitoring
   # services.netdata = {

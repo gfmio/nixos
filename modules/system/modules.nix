@@ -36,5 +36,6 @@
     ./packages.nix
     ./restic.nix
     ./flatpak.nix
+    ./clamav.nix
   ];
 }
