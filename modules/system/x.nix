@@ -17,7 +17,7 @@ in
       x = {
         enable = mkOption { type = types.bool; default = false; };
         enableLibInput = mkOption { type = types.bool; default = true; };
-        enableSynaptics = mkOption { type = types.bool; default = true; };
+        enableSynaptics = mkOption { type = types.bool; default = false; };
         xkbLayout = mkOption { type = types.str; default = "us"; };
         xkbOptions = mkOption { type = types.str; default = ""; };
       };
