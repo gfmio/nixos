@@ -18,6 +18,7 @@
 
   modules = {
     hardware = {
+      enable = true;
       # Enable nvidia, qemu or neither
       intel = {
         enable = false;
@@ -281,7 +282,6 @@
   # #   neofetch
   # #   micro
   # #   ncdu
-  # #   gparted
   # #   ntfs3g
   # #   ripgrep
   # #   file
