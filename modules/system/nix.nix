@@ -12,6 +12,8 @@ with lib;
   config = {
     nixpkgs.config.allowUnfree = true;
 
+    system.autoUpgrade.enable = true;
+
     nix = {
       # Automatically run the garbage collector
       gc.automatic = false;

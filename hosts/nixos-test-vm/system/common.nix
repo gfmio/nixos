@@ -257,7 +257,6 @@
   # # udisks2.enable = true;
   # # printing.enable = true;
 
-  # # system.autoUpgrade.enable = true;
 
   # # system packages
   # # environment.systemPackages = with pkgs; with qt5; with libsForQt5; with plasma5; with kdeApplications; [
