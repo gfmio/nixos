@@ -13,5 +13,6 @@
     ./ssh.nix
     ./htop.nix
     ./tmux.nix
+    ./restic.nix
   ];
 }

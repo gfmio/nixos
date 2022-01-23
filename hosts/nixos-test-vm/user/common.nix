@@ -29,25 +29,44 @@
   # Modules
   #
 
-  modules.x.enable = true;
-  modules.x.scale = 2.0;
-
-  modules.i3.enable = true;
-
-  modules.chromium.enable = true;
-
-  modules.firefox.enable = true;
-
-  modules.vscode.enable = true;
-
-  modules.sublime.enable = true;
-
-  modules.ssh.enable = true;
-
-  modules.git.enable = true;
-  modules.git.email = "git@gfm.io";
-
-  modules.zsh.enable = true;
-
-  modules.htop.enable = true;
+  modules = {
+    x = {
+      enable = true;
+      scale = 2.0;
+    };
+    i3 = {
+      enable = true;
+    };
+    chromium = {
+      enable = true;
+    };
+    firefox = {
+      enable = true;
+    };
+    vscode = {
+      enable = true;
+    };
+    sublime = {
+      enable = true;
+    };
+    ssh = {
+      enable = true;
+    };
+    git = {
+      enable = true;
+      email =  "git@gfm.io";
+    };
+    zsh = {
+      enable = true;
+    };
+    htop = {
+      enable = true;
+    };
+    tmux = {
+      enable = true;
+    };
+    restic = {
+      enable = false;
+    };
+  };
 }
