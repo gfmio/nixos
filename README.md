@@ -60,3 +60,5 @@ home-manager switch
 
 - <https://github.com/angristan/nixos-config/blob/master/configuration.nix>
 - <https://github.com/msfjarvis/dotfiles/blob/main/nixos/home-manager.nix>
+- <https://gist.github.com/AcouBass/4f5bcb3410f14bd5063a718b1d53bc4c>
+- <https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/ananicy/default.nix>
