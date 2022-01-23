@@ -19,6 +19,16 @@ in
   config = mkIf cfg.enable {
     programs.ssh = {
       enable = true;
+
+      matchBlocks = {
+        # name = {
+        #   hostname = "example.com";
+        #   user = "root";
+        #   port = 22;
+        #   identityFile = "~/.ssh/id_rsa";
+        #   identitiesOnly = true;
+        # };
+      };
     };
   };
 }
