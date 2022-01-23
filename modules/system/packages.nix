@@ -47,6 +47,8 @@ in
       gnome3.nautilus
 
       remmina
+
+      gparted
     ];
 
     #
