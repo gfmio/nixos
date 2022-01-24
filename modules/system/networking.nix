@@ -34,7 +34,7 @@ in
     # replicates the default behaviour.
     networking.useDHCP = false;
 
-    networking.interfaces.enp7s0.useDHCP = true;
+    networking.interfaces.enp1s0.useDHCP = true;
 
     # Configure network proxy if necessary
     # networking.proxy.default = "http://user:password@proxy:port/";
