@@ -17,7 +17,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    programs.picom = {
+    services.picom = {
       enable = true;
 
       #################################
@@ -95,6 +95,7 @@ in
       #
       #################################
 
+      frame-opacity = 1;
       inactive-opacity-override = false;
       alpha-step = 0.06;
 
@@ -193,7 +194,7 @@ in
       ];
 
       # The translucency for shadows. (default .75)
-      shadowOpacity = 0.5;
+      shadowOpacity = "0.5";
 
       # The shadow exclude options are helpful if you have shadows enabled. Due to the way compton draws its shadows, certain applications will have visual glitches
       # (most applications are fine, only apps that do weird things with xshapes or argb are affected).
@@ -225,19 +226,18 @@ in
       #
       #################################
 
-      menuOpacity = 1;
-      inactiveOpacity = 1;
-      activeOpacity = 1;
-      frameOpacity = 1;
+      menuOpacity = "1";
+      inactiveOpacity = "1";
+      activeOpacity = "1";
 
       # Dim inactive windows. (0.0 - 1.0)
       # inactive-dim = 0.2;
       # Do not let dimness adjust based on window opacity.
       # inactive-dim-fixed = true;
       # Blur background of transparent windows. Bad performance with X Render backend. GLX backend is preferred.
-      blurBackground = true;
+      blur = true;
       blurExclude = [
-        "window_type = 'dock'",
+        "window_type = 'dock'"
         "window_type = 'desktop'"
       ];
 
@@ -283,7 +283,8 @@ in
       # opengl-swc: Try to VSync with SGI_swap_control OpenGL extension. Only work on some drivers. Works only with GLX backend. Known to be most effective on many drivers. Does not actually control paint timing, only buffer swap is affected, so it doesn’t have the effect of --sw-opti unlike other methods. Experimental.
       # opengl-mswc: Try to VSync with MESA_swap_control OpenGL extension. Basically the same as opengl-swc above, except the extension we use.
       # (Note some VSync methods may not be enabled at compile time.)
-      vSync = "opengl-swc";
+      # vsync = "opengl-swc";
+      vSync = true;
     };
   };
 }
