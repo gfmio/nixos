@@ -33,6 +33,14 @@ home-manager switch
 
 - [x] Split out the main configuration into manageable chunks
 - [ ] Integrate my usual config files
+  - [ ] i3
+  - [ ] i3status
+  - [ ] i3blocks?
+  - [ ] sway
+  - [ ] picom
+  - [x] alacritty
+  - [x] kitty
+  - [ ] git
 - [x] Set up home manager
 - [x] Configure common utilities
   - [x] VS Code
@@ -48,7 +56,10 @@ home-manager switch
     - [ ] extensions
     - [ ] settings
 - [x] Have a separate partition for /home
+- [ ] create installer iso
 - [ ] Verify it works on physical devices
+  - [ ] xiaomi
+  - [ ] thinkpad
 - [ ] xrdp
   - [x] basic support
   - [x] clipboard support
