@@ -47,7 +47,7 @@ home-manager switch
   - [x] firefox
     - [ ] extensions
     - [ ] settings
-- [ ] Have a separate partition for /home
+- [x] Have a separate partition for /home
 - [ ] Verify it works on physical devices
 - [ ] xrdp
   - [x] basic support
