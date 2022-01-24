@@ -149,19 +149,11 @@
     dns = {
       enable = true;
     };
+    tor = {
+      enable = false;
+    };
   };
 
-  # # ## Tor + Privoxy
-
-  # # privoxy.enable = true;
-  # # tor = {
-  # #   enable = true;
-  # #   client = {
-  # #   	enable = true;
-  # #   	privoxy.enable = true;
-  # #   };
-  # #   tsocks.enable = true;
-  # # };
 
   # # # Redshift
 

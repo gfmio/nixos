@@ -42,5 +42,6 @@
     ./bluetooth.nix
     ./syncthing.nix
     ./dns.nix
+    ./tor.nix
   ];
 }
