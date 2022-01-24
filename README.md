@@ -37,10 +37,11 @@ home-manager switch
   - [ ] i3status
   - [ ] i3blocks?
   - [ ] sway
-  - [ ] picom
+  - [x] picom
   - [x] alacritty
   - [x] kitty
-  - [ ] git
+  - [x] git
+  - [ ] mako?
 - [x] Set up home manager
 - [x] Configure common utilities
   - [x] VS Code

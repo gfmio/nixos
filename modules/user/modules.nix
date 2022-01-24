@@ -15,5 +15,6 @@
     ./tmux.nix
     ./kitty.nix
     ./alacritty.nix
+    ./picom.nix
   ];
 }

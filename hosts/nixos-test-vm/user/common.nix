@@ -71,5 +71,8 @@
     alacritty = {
       enable = true;
     };
+    picom = {
+      enable = true;
+    };
   };
 }
