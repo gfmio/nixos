@@ -146,21 +146,10 @@
     syncthing = {
       enable = false;
     };
+    dns = {
+      enable = true;
+    };
   };
-
-
-  # # # Syncthing service config
-
-  # # ## DNSCrypt + DNSMasq
-
-  # # dnscrypt-proxy = {
-  # #   enable = true;
-  # #   localPort = 43;
-  # # };
-  # # dnsmasq = {
-  # #   enable = true;
-  # #   servers = [ "127.0.0.1#43" ];
-  # # };
 
   # # ## Tor + Privoxy
 

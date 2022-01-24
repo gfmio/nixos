@@ -41,5 +41,6 @@
     ./netdata.nix
     ./bluetooth.nix
     ./syncthing.nix
+    ./dns.nix
   ];
 }
