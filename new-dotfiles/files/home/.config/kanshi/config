@@ -1,0 +1,30 @@
+profile "desk" {
+    output eDP-1 disable
+    output "Dell Inc. DELL P2415Q D8VXF7C50A4B" enable mode 3840x2160 scale 2 position 0,0
+    output "Dell Inc. DELL P2415Q D8VXF06B07HB" enable mode 3840x2160 scale 2 position 1920,0
+}
+
+profile "monitor2" {
+    output eDP-1 disable
+    output "Dell Inc. DELL P2415Q D8VXF7C50A4B" enable mode 3840x2160 scale 2 position 0,0
+}
+
+profile "monitor4" {
+    output eDP-1 disable
+    output "Dell Inc. DELL P2415Q D8VXF06B07HB" enable mode 3840x2160 scale 2 position 0,0
+}
+
+profile "monitor3" {
+    output eDP-1 disable
+    output "Dell Inc. DELL P2415Q D8VXF06B07EB" enable mode 3840x2160 scale 2 position 0,0
+}
+
+profile "laptop" {
+    output eDP-1 disable
+    output eDP-1 enable mode 3840x2160 scale 2 position 0,0
+}
+
+profile "rdp" {
+    output VIRTUAL-1 enable mode 3840x2160 scale 2 position 0,0
+}
+

@@ -1,0 +1,15 @@
+[Unit]
+Description=Idle manager for Wayland
+Documentation=man:swayidle(1)
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w \
+         timeout 300 'swaylock--ignore-empty-password --show-failed-attempts -f -e -i /home/gfmio/Pictures/wallpaper.png -s fill' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock --ignore-empty-password --show-failed-attempts -f -e -i /home/gfmio/Pictures/wallpaper.png -s fill' \
+         lock 'swaylock --ignore-empty-password --show-failed-attempts -f -e -i /home/gfmio/Pictures/wallpaper.png -s fill'
+
+[Install]
+WantedBy=sway-session.target

@@ -1,0 +1,13 @@
+#! /bin/sh
+
+dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# first import environment variables from the login manager
+
+systemctl --user import-environment
+# systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# then start the service
+exec systemctl --wait --user start sway.service
+# sway
+
