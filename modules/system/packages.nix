@@ -131,7 +131,7 @@ in
       # solargraph # ruby tools
       # rubocop
       gtk3
-      gnome3.glade
+      glade
       pkgconfig
       # Compiler and debugger
       gcc
