@@ -147,7 +147,7 @@
       enable = false;
     };
     dns = {
-      enable = true;
+      enable = false;
     };
     tor = {
       enable = false;

@@ -24,5 +24,7 @@ in
     # Enable Flatpak
     services.flatpak.enable = true;
     # No snap yet: https://github.com/NixOS/nixpkgs/issues/30336
+
+    xdg.portal.enable = true;
   };
 }

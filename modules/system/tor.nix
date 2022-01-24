@@ -23,8 +23,9 @@ in
   config = mkIf cfg.enable {
     # Tor + Privoxy
 
-    privoxy.enable = true;
-    tor = {
+    services.privoxy.enable = true;
+
+    services.tor = {
       enable = true;
       client = {
         enable = true;

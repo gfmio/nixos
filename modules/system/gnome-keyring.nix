@@ -22,6 +22,6 @@ in
 
   config = mkIf cfg.enable {
     # Enable GNOME Keyring daemon
-    services.gnome3.gnome-keyring.enable = true;
+    services.gnome.gnome-keyring.enable = true;
   };
 }
