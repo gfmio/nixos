@@ -170,7 +170,6 @@
   # #   latitude = "53.5615";
   # #   longitude = ".3268";
   # # };
-  # # udisks2.enable = true;
 
   # # system packages
   # # environment.systemPackages = with pkgs; with qt5; with libsForQt5; with plasma5; with kdeApplications; [

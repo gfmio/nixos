@@ -38,5 +38,7 @@ in
 
     # Periodically update the database of files used by the locate command
     services.locate.enable = true;
+
+    udisks2.enable = true;
   };
 }
