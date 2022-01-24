@@ -65,5 +65,8 @@
     tmux = {
       enable = true;
     };
+    kitty = {
+      enable = true;
+    };
   };
 }
