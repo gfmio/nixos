@@ -17,7 +17,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    programs.kitty = {
+    programs.alacritty = {
       enable = true;
       settings = {
       # Configuration for Alacritty, the GPU enhanced terminal emulator.
