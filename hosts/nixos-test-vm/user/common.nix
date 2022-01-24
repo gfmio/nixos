@@ -68,5 +68,8 @@
     kitty = {
       enable = true;
     };
+    alacritty = {
+      enable = true;
+    };
   };
 }
