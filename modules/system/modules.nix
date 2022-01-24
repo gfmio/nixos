@@ -43,5 +43,6 @@
     ./syncthing.nix
     ./dns.nix
     ./tor.nix
+    ./redshift.nix
   ];
 }

@@ -152,16 +152,12 @@
     tor = {
       enable = false;
     };
+    redshift = {
+      enable = true;
+    };
   };
 
 
-  # # # Redshift
-
-  # # redshift = {
-  # #   enable = true;
-  # #   latitude = "53.5615";
-  # #   longitude = ".3268";
-  # # };
 
   # # system packages
   # # environment.systemPackages = with pkgs; with qt5; with libsForQt5; with plasma5; with kdeApplications; [
