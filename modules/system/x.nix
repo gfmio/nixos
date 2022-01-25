@@ -36,5 +36,8 @@ in
     services.xserver.xkbOptions = cfg.xkbOptions;
 
     services.xserver.synaptics.enable = cfg.enableSynaptics;
+
+    services.xserver.desktopManager.wallpaper.combineScreens = false;
+    services.xserver.desktopManager.wallpaper.mode = "fill";
   };
 }
