@@ -37,6 +37,12 @@
     i3 = {
       enable = true;
     };
+    i3status = {
+      enable = true;
+      ipv6 = false;
+      wireless = false;
+      battery = false;
+    };
     chromium = {
       enable = true;
     };

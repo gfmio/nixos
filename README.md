@@ -33,8 +33,8 @@ home-manager switch
 
 - [x] Split out the main configuration into manageable chunks
 - [ ] Integrate my usual config files
-  - [ ] i3
-  - [ ] i3status
+  - [x] i3
+  - [x] i3status
   - [ ] i3blocks?
   - [ ] sway
   - [x] picom
@@ -42,6 +42,8 @@ home-manager switch
   - [x] kitty
   - [x] git
   - [ ] mako?
+  - [ ] kanshi
+  - [ ] xdg-desktop-portal-wlr
 - [x] Set up home manager
 - [x] Configure common utilities
   - [x] VS Code

@@ -4,6 +4,7 @@
   imports = [
     ./x.nix
     ./i3.nix
+    ./i3status.nix
     ./chromium.nix
     ./firefox.nix
     ./vscode.nix
