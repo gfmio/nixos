@@ -357,6 +357,21 @@ in
             "Escape" = "mode default";
           };
         };
+        startup = [
+          { command = "$HOME/.screenlayout/desk.sh"; notification = false; }
+          { command = "${pkgs.feh}/bin/feh --bg-scale $HOME/.background-image"; notification = false; }
+          # Start XDG autostart .desktop files using dex. See also
+          # https://wiki.archlinux.org/index.php/XDG_Autostart
+          { command = "${pkgs.dex}/bin/dex--autostart --environment i3"; notification = false; }
+          # TODO: fix picom
+          # { command = ''${pkgs.picom}/bin/picom -b --focus-exclude "x = 0 && y = 0 && override_redirect = true"''; notification = false; }
+        ];
+        # extraSessionCommands = ''
+        #
+        #   ${pkgs.dunst}/bin/dunst &
+        #   ${optionalString config.networking.networkmanager.enable "${pkgs.networkmanagerapplet}/bin/nm-applet &"}
+        #   ${optionalString config.hardware.bluetooth.enable "${pkgs.blueman}/bin/blueman-applet &"}
+        # '';
       };
       extraConfig = ''
       #
@@ -380,15 +395,12 @@ in
       set $mint500 #00ccc0
       set $alien900 #02315c
       '';
+
     # #
     # ### Autostart
     # #
 
-    # # Start XDG autostart .desktop files using dex. See also
-    # # https://wiki.archlinux.org/index.php/XDG_Autostart
     # exec --no-startup-id dex --autostart --environment i3
-
-    # # exec --no-startup-id picom -b --focus-exclude "x = 0 && y = 0 && override_redirect = true"
 
     # exec --no-startup-id feh --bg-scale "$HOME/.background-image"
 
