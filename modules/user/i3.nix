@@ -254,13 +254,13 @@ in
           #
 
           # Use pactl to adjust volume in PulseAudio.
-          "XF86AudioRaiseVolume" = "pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status";
-          "XF86AudioLowerVolume" = "pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status";
-          "XF86AudioMute" = "pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
-          "XF86AudioMicMute" = "pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status";
+          "XF86AudioRaiseVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status";
+          "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status";
+          "XF86AudioMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
+          "XF86AudioMicMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status";
 
-          "XF86MonBrightnessUp" = "exec brightnessctl -d intel_backlight set -e +10%";
-          "XF86MonBrightnessDown" = "exec brightnessctl -d intel_backlight set -e 10%-";
+          "XF86MonBrightnessUp" = "exec ${pkgs.brightnessctl}/bin/brightnessctl -d intel_backlight set -e +10%";
+          "XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl -d intel_backlight set -e 10%-";
           # "XF86MonBrightnessUp" = "exec /usr/bin/xbacklight -inc 10";
           # "XF86MonBrightnessDown" = "exec /usr/bin/xbacklight -dec 10";
         };
