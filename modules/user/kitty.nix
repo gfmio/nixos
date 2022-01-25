@@ -28,6 +28,8 @@ in
         background = "#000000";
         background_opacity = "1.0";
 
+        window_padding_width = 0;
+
         # Black, Gray
         color0  = "#111111";
         color8  = "#aaaaaa";
@@ -86,7 +88,7 @@ in
       };
       font = {
         name = "Hack";
-        size = 12;
+        size = 10;
       };
       keybindings = {};
       environment = {
