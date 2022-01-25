@@ -22,6 +22,8 @@ sudo nixos-generate-config --root /mnt;
 
 sudo nixos-install;
 
+sudo cp -r . /mnt/install;
+
 sudo umount /mnt/boot;
 sudo umount /mnt/home;
 sudo umount /mnt;
