@@ -21,6 +21,7 @@ let
   ws8 = "8";
   ws9 = "9";
   ws10 = "10";
+  lockCommand = "i3lock --ignore-empty-password --show-failed-attempts --image $HOME/.background-image -t";
 in
 {
   imports = [];
@@ -332,7 +333,7 @@ in
           "${systemMode}" = {
             # set $mode_system    [L]OCK       LOG[O]UT       [S]USPEND       [R]EBOOT       [P]OWEROFF
             "l" = ''exec --no-startup-id "\
-              i3lock --ignore-empty-password --show-failed-attempts --image $HOME/.background-image"; \
+              ${lockCommand}"; \
               mode "default"
             '';
             "o" = ''exec --no-startup-id "\
@@ -340,7 +341,7 @@ in
               mode "default"
             '';
             "s" = ''exec --no-startup-id "\
-              i3lock --ignore-empty-password --show-failed-attempts --image $HOME/.background-image && systemctl suspend"; \
+              ${lockCommand} && systemctl suspend"; \
               mode "default"
             '';
             "r" = ''exec --no-startup-id "\
