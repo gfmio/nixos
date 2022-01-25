@@ -91,9 +91,9 @@ in
         size = 10;
       };
       keybindings = {};
-      environment = {
-        "LS_COLORS" = "1";
-      };
+      # environment = {
+      #   "LS_COLORS" = "1";
+      # };
     };
   };
 }
