@@ -27,6 +27,13 @@ in
       "Xft.antialias" = 1;
       "Xft.rgba" = "rgb";
     };
+
     xsession.enable = true;
+
+    xsession.pointerCursor = {
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
+      size = builtins.floor (32 * cfg.scale);
+    };
   };
 }
