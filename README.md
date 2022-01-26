@@ -59,9 +59,9 @@ home-manager switch
     - [ ] extensions
     - [ ] settings
 - [x] Have a separate partition for /home
-- [ ] create installer iso
-- [ ] Verify it works on physical devices
-  - [ ] xiaomi
+- [x] create installer iso
+- [x] Verify it works on physical devices
+  - [x] xiaomi
   - [ ] thinkpad
 - [ ] xrdp
   - [x] basic support
@@ -71,6 +71,7 @@ home-manager switch
 - [x] RDP and VNC client
 - [ ] Backups
 - [ ] Disk encryption
+- [ ] Add proper installer where you can do disk formatting and feature selection using the UI :)
 
 ## Resources
 
