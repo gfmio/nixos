@@ -5,8 +5,8 @@ with lib;
 let
   cfg = config.modules.i3;
   i3cfg = config.xsession.windowManager.i3;
-  super = "Mod1";
-  alt = "Mod4";
+  super = "Mod4";
+  alt = "Mod1";
   mod = "Mod4";
   ctrl = "Ctrl";
   systemMode = "L: lock · O: logout · S: suspend · R: reboot · P: poweroff";
