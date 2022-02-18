@@ -18,5 +18,6 @@
     ./alacritty.nix
     ./picom.nix
     ./networking.nix
+    ./gpg.nix
   ];
 }

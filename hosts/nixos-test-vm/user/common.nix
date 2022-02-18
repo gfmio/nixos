@@ -84,5 +84,8 @@
       enable = true;
       enableNetworkManagerApplet = false;
     };
+    gpg = {
+      enable = true;
+    };
   };
 }

@@ -81,6 +81,9 @@
       enable = true;
       enableNetworkManagerApplet = true;
     };
+    gpg = {
+      enable = true;
+    };
   };
 
   services.network-manager-applet.enable = true;
