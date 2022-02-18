@@ -82,7 +82,7 @@
       enable = false;
     };
     sway = {
-      enable = false;
+      enable = true;
     };
     i3 = {
       enable = true;

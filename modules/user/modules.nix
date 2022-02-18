@@ -20,5 +20,6 @@
     ./networking.nix
     ./gpg.nix
     ./gnome-passwordsafe.nix
+    ./sway.nix
   ];
 }

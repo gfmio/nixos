@@ -87,5 +87,8 @@
     gnome-passwordsafe = {
       enable = true;
     };
+    sway = {
+      enable = true;
+    };
   };
 }
