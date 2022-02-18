@@ -47,7 +47,6 @@ in
     hardware.nvidia.modesetting.enable = true;
 
     # GDM
-    services.xserver.displayManager.gdm.nvidiaWayland = false;
     services.xserver.displayManager.gdm.wayland = false;
 
     # Prime
