@@ -16,14 +16,16 @@ in
     modules = {
       system = {
         enable = mkOption { type = types.bool; default = false; };
+        fileSystemsToOptimizeForSSD = mkOption { type = types.ListOf types.str; default = ["/"]; };
       };
     };
   };
 
   config = mkIf cfg.enable {
     # No access time and continuous TRIM for SSD
-    fileSystems."/".options = [ "noatime" "discard" ];
-    fileSystems."/home".options = [ "noatime" "discard" ];
+    fileSystems = listToAttrs (map (mountPoint: { name = mountPoint; value = { options = [ "noatime" "discard" ]; }; }) cfg.fileSystemsToOptimizeForSSD );
+    # fileSystems."/".options = [ "noatime" "discard" ];
+    # fileSystems."/home".options = [ "noatime" "discard" ];
 
     # If non-empty, write log messages to the specified TTY device.
     services.journald.console = "/dev/tty12";
