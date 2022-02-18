@@ -84,6 +84,9 @@
     gpg = {
       enable = true;
     };
+    gnome-passwordsafe = {
+      enable = true;
+    };
   };
 
   services.network-manager-applet.enable = true;

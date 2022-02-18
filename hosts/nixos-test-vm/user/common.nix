@@ -87,5 +87,8 @@
     gpg = {
       enable = true;
     };
+    gnome-passwordsafe = {
+      enable = true;
+    };
   };
 }

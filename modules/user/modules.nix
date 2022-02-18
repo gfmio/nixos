@@ -19,5 +19,6 @@
     ./picom.nix
     ./networking.nix
     ./gpg.nix
+    ./gnome-passwordsafe.nix
   ];
 }
