@@ -17,5 +17,6 @@
     ./kitty.nix
     ./alacritty.nix
     ./picom.nix
+    ./networking.nix
   ];
 }

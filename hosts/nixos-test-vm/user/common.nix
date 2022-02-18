@@ -80,5 +80,9 @@
     picom = {
       enable = true;
     };
+    networking = {
+      enable = true;
+      enableNetworkManagerApplet = false;
+    };
   };
 }
