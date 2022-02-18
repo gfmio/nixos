@@ -16,7 +16,7 @@ in
     modules = {
       system = {
         enable = mkOption { type = types.bool; default = false; };
-        fileSystemsToOptimizeForSSD = mkOption { type = types.ListOf types.str; default = ["/"]; };
+        fileSystemsToOptimizeForSSD = mkOption { type = types.listOf types.str; default = ["/"]; };
       };
     };
   };
