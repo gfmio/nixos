@@ -77,6 +77,7 @@
     displayManager = {
       enable = true;
       displayManager = "gdm";
+      defaultSession = "none+i3";
     };
     gnome = {
       enable = false;
