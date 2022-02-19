@@ -57,6 +57,7 @@
     networking = {
       enable = true;
       hostname = "gfmio-nixos";
+      dhcpInterfaces = [ "enp1s0" ];
       # TODO: Ethernet adapters, wireless, firewall
     };
     i18n = {
