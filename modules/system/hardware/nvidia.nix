@@ -47,7 +47,7 @@ in
     hardware.nvidia.modesetting.enable = true;
 
     # GDM
-    services.xserver.displayManager.gdm.wayland = false;
+    services.xserver.displayManager.gdm.wayland = true;
 
     # Prime
     environment.systemPackages = mkIf (cfg.enablePrime && (cfg.primeMode == "offload")) [ nvidia-offload ];
