@@ -93,5 +93,8 @@
     sway = {
       enable = false;
     };
+    gnome-disk-utility = {
+      enable = true;
+    };
   };
 }

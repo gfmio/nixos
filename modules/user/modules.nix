@@ -21,5 +21,6 @@
     ./gpg.nix
     ./gnome-passwordsafe.nix
     ./sway.nix
+    ./gnome-disk-utility.nix
   ];
 }
