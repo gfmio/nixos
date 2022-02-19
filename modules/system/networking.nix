@@ -36,7 +36,6 @@ in
     networking.useDHCP = false;
 
     networking.interfaces = listToAttrs (map (interfaceName: { name = interfaceName; value = { useDHCP = true; }; }) cfg.dhcpInterfaces );
-    # networking.interfaces.enp1s0.useDHCP = true;
 
     # Configure network proxy if necessary
     # networking.proxy.default = "http://user:password@proxy:port/";
