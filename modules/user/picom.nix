@@ -68,7 +68,7 @@ in
       # Useless with --glx-use-copysubbuffermesa.
       # Partially breaks --resize-damage.
       # Defaults to undefined.
-      glx-swap-method = "undefined";
+      # glx-swap-method = "undefined";
 
       #################################
       #
