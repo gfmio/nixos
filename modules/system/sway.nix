@@ -37,6 +37,11 @@ in
         wl-clipboard
         brightnessctl
       ];
+      extraOptions = [
+        "--verbose"
+        "--debug"
+        "--unsupported-gpu"
+      ];
     };
 
     nixpkgs.overlays = [
