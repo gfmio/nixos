@@ -27,23 +27,6 @@ let
   ws8 = "8";
   ws9 = "9";
   ws10 = "10";
-
-  # Colors
-  orangeRed = "#ff4500";
-
-  beluga = "#ffffff";
-  dugong = "#f2f6f7";
-  dolphin = "#d7dfe2";
-  seal = "#bbc7cc";
-  narwhal = "#7a9299";
-  urchin = "#172e35";
-  squidInk = "#000000";
-
-  mango50 = "#fff8b8";
-  sakura300 = "#ff99aa";
-  mango500 = "#ffa800";
-  mint500 = "#00ccc0";
-  alien900 = "#02315c";
 in
 {
   config = {
@@ -65,44 +48,44 @@ in
     # i3-dmenu-desktop
     menu = menu;
 
-    colors = {
-      focused = {
-        border = urchin;
-        background = urchin;
-        text = beluga;
-        indicator = urchin;
-        childBorder = urchin;
-      };
-      focusedInactive = {
-        border = narwhal;
-        background = narwhal;
-        text = seal;
-        indicator = narwhal;
-        childBorder = narwhal;
-      };
-      unfocused = {
-        border = "#333333";
-        background = "#222222";
-        text = "#888888";
-        indicator = "#292d2e";
-        childBorder = "#222222";
-      };
-      urgent = {
-        border = orangeRed;
-        background = orangeRed;
-        text = beluga;
-        indicator = urchin;
-        childBorder = urchin;
-      };
-      placeholder = {
-        border = "#000000";
-        background = "#0c0c0c";
-        text = "#ffffff";
-        indicator = "#000000";
-        childBorder = "#0c0c0c";
-      };
-      background = squidInk;
-    };
+    # colors = {
+    #   focused = {
+    #     border = "#ffffff";
+    #     background = "#ffffff";
+    #     text = "#ffffff";
+    #     indicator = "#ffffff";
+    #     childBorder = "#ffffff";
+    #   };
+    #   focusedInactive = {
+    #     border = "#ffffff";
+    #     background = "#ffffff";
+    #     text = "#ffffff";
+    #     indicator = "#ffffff";
+    #     childBorder = "#ffffff";
+    #   };
+    #   unfocused = {
+    #     border = "#333333";
+    #     background = "#222222";
+    #     text = "#888888";
+    #     indicator = "#292d2e";
+    #     childBorder = "#222222";
+    #   };
+    #   urgent = {
+    #     border = "#ffffff";
+    #     background = "#ffffff";
+    #     text = "#ffffff";
+    #     indicator = "#ffffff";
+    #     childBorder = "#ffffff";
+    #   };
+    #   placeholder = {
+    #     border = "#000000";
+    #     background = "#0c0c0c";
+    #     text = "#ffffff";
+    #     indicator = "#000000";
+    #     childBorder = "#0c0c0c";
+    #   };
+    #   background = "#ffffff";
+    # };
 
     window = {
       # Window borders
@@ -284,41 +267,41 @@ in
       statusCommand = "i3status";
       # statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
       trayOutput = "primary";
-      colors = {
-        background = squidInk;
-        statusline = dugong;
-        separator = dugong;
+      # colors = {
+      #   background = "#ffffff";
+      #   statusline = "#ffffff";
+      #   separator = "#ffffff";
 
-        focusedBackground = squidInk;
-        focusedStatusline = beluga;
-        focusedSeparator = beluga;
+      #   focusedBackground = "#ffffff";
+      #   focusedStatusline = "#ffffff";
+      #   focusedSeparator = "#ffffff";
 
-        focusedWorkspace = {
-          border = orangeRed;
-          background = orangeRed;
-          text = beluga;
-        };
-        activeWorkspace = {
-          border = orangeRed;
-          background = orangeRed;
-          text = squidInk;
-        };
-        inactiveWorkspace = {
-          border = urchin;
-          background = urchin;
-          text = seal;
-        };
-        urgentWorkspace = {
-          border = "#2f343a";
-          background = "#900000";
-          text = "#ffffff";
-        };
-        bindingMode = {
-          border = "#2f343a";
-          background = "#900000";
-          text = "#ffffff";
-        };
-      };
+      #   focusedWorkspace = {
+      #     border = "#ffffff";
+      #     background = "#ffffff";
+      #     text = "#ffffff";
+      #   };
+      #   activeWorkspace = {
+      #     border = "#ffffff";
+      #     background = "#ffffff";
+      #     text = "#ffffff";
+      #   };
+      #   inactiveWorkspace = {
+      #     border = "#ffffff";
+      #     background = "#ffffff";
+      #     text = "#ffffff";
+      #   };
+      #   urgentWorkspace = {
+      #     border = "#2f343a";
+      #     background = "#900000";
+      #     text = "#ffffff";
+      #   };
+      #   bindingMode = {
+      #     border = "#2f343a";
+      #     background = "#900000";
+      #     text = "#ffffff";
+      #   };
+      # };
       extraConfig = ''
         separator_symbol ·
       '';
