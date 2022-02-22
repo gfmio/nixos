@@ -79,3 +79,11 @@ home-manager switch
 - <https://github.com/msfjarvis/dotfiles/blob/main/nixos/home-manager.nix>
 - <https://gist.github.com/AcouBass/4f5bcb3410f14bd5063a718b1d53bc4c>
 - <https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/ananicy/default.nix>
+
+## Firewall
+
+To temporarily open a port (e.g. 3000) in the firewall, run:
+
+```sh
+sudo iptables -I INPUT 2 -p tcp --dport 3000 -j ACCEPT
+```
