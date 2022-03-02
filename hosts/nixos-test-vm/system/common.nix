@@ -39,6 +39,9 @@
     system = {
       enable = true;
     };
+    diskEncryption = {
+      enable = false;
+    };
     smart = {
       enable = false;
     };

@@ -44,5 +44,6 @@
     ./dns.nix
     ./tor.nix
     ./redshift.nix
+    ./disk-encryption.nix
   ];
 }
