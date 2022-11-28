@@ -33,6 +33,17 @@ home-manager switch
 
 - [x] Split out the main configuration into manageable chunks
 - [ ] Integrate my usual config files
+  - [x] i3
+  - [x] i3status
+  - [ ] i3blocks?
+  - [ ] sway
+  - [x] picom
+  - [x] alacritty
+  - [x] kitty
+  - [x] git
+  - [ ] mako?
+  - [ ] kanshi
+  - [ ] xdg-desktop-portal-wlr
 - [x] Set up home manager
 - [x] Configure common utilities
   - [x] VS Code
@@ -48,7 +59,10 @@ home-manager switch
     - [ ] extensions
     - [ ] settings
 - [x] Have a separate partition for /home
-- [ ] Verify it works on physical devices
+- [x] create installer iso
+- [x] Verify it works on physical devices
+  - [x] xiaomi
+  - [ ] thinkpad
 - [ ] xrdp
   - [x] basic support
   - [x] clipboard support
@@ -57,6 +71,7 @@ home-manager switch
 - [x] RDP and VNC client
 - [ ] Backups
 - [ ] Disk encryption
+- [ ] Add proper installer where you can do disk formatting and feature selection using the UI :)
 
 ## Resources
 
@@ -64,3 +79,11 @@ home-manager switch
 - <https://github.com/msfjarvis/dotfiles/blob/main/nixos/home-manager.nix>
 - <https://gist.github.com/AcouBass/4f5bcb3410f14bd5063a718b1d53bc4c>
 - <https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/ananicy/default.nix>
+
+## Firewall
+
+To temporarily open a port (e.g. 3000) in the firewall, run:
+
+```sh
+sudo iptables -I INPUT 2 -p tcp --dport 3000 -j ACCEPT
+```

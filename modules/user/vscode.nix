@@ -48,6 +48,7 @@ in
         "[typescriptreact]" = {
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
         };
+        "remote.localPortHost" = "allInterfaces";
       };
       # extensions = with pkgs.vscode-extensions; [
       #   # bbenoist.nix

@@ -30,7 +30,24 @@ in
       keyMap = "us";
       earlySetup = true;
       # useXkbConfig = true;
-      # colors = [];
+      colors = [
+        "111111"
+        "ff4136"
+        "3D9970"
+        "ffdc00"
+        "0074d9"
+        "f012be"
+        "39cccc"
+        "dddddd"
+        "aaaaaa"
+        "ff4136"
+        "01ff70"
+        "ffdc00"
+        "7fdbff"
+        "f012be"
+        "39cccc"
+        "ffffff"
+      ];
       # example = [
       #   "002b36" "dc322f" "859900" "b58900"
       #   "268bd2" "d33682" "2aa198" "eee8d5"

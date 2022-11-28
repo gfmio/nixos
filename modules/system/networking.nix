@@ -18,6 +18,7 @@ in
         enable = mkOption { type = types.bool; default = false; };
         hostname = mkOption { type = types.str; };
         enableWireless = mkOption { type = types.bool; default = false; };
+        dhcpInterfaces = mkOption { type = types.listOf types.str; default = []; };
       };
     };
   };
@@ -34,7 +35,7 @@ in
     # replicates the default behaviour.
     networking.useDHCP = false;
 
-    networking.interfaces.enp1s0.useDHCP = true;
+    networking.interfaces = listToAttrs (map (interfaceName: { name = interfaceName; value = { useDHCP = true; }; }) cfg.dhcpInterfaces );
 
     # Configure network proxy if necessary
     # networking.proxy.default = "http://user:password@proxy:port/";

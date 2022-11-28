@@ -37,6 +37,12 @@
     i3 = {
       enable = true;
     };
+    i3status = {
+      enable = true;
+      ipv6 = false;
+      wireless = false;
+      battery = false;
+    };
     chromium = {
       enable = true;
     };
@@ -63,6 +69,31 @@
       enable = true;
     };
     tmux = {
+      enable = true;
+    };
+    kitty = {
+      enable = true;
+    };
+    alacritty = {
+      enable = true;
+    };
+    picom = {
+      enable = true;
+    };
+    networking = {
+      enable = true;
+      enableNetworkManagerApplet = false;
+    };
+    gpg = {
+      enable = true;
+    };
+    gnome-passwordsafe = {
+      enable = true;
+    };
+    sway = {
+      enable = false;
+    };
+    gnome-disk-utility = {
       enable = true;
     };
   };

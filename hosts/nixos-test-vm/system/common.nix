@@ -39,6 +39,9 @@
     system = {
       enable = true;
     };
+    diskEncryption = {
+      enable = false;
+    };
     smart = {
       enable = false;
     };
@@ -57,6 +60,7 @@
     networking = {
       enable = true;
       hostname = "gfmio-nixos";
+      dhcpInterfaces = [ "enp1s0" ];
       # TODO: Ethernet adapters, wireless, firewall
     };
     i18n = {
@@ -71,6 +75,7 @@
     displayManager = {
       enable = true;
       displayManager = "gdm";
+      defaultSession = "none+i3";
     };
     gnome = {
       enable = false;

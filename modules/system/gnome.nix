@@ -25,7 +25,7 @@ in
 
     environment.gnome3.excludePackages = with pkgs.gnome3; [
       epiphany
-      evolution
+      # evolution
       gnome-maps
       accerciser
     ];
