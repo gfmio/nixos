@@ -77,8 +77,12 @@
           import ./nixosConfigurations/nixos-vm/configuration.nix flakeContext {
             system = "x86_64-linux";
           };
-        xiaomi-x86_64-linux =
+        xiaomi =
           import ./nixosConfigurations/xiaomi/configuration.nix flakeContext {
+            system = "x86_64-linux";
+          };
+        gfmio-nixos-vm =
+          import ./nixosConfigurations/gfmio-nixos-vm/configuration.nix flakeContext {
             system = "x86_64-linux";
           };
       };
@@ -139,6 +143,9 @@
             system = "x86_64-linux";
           };
           xiaomi = import ./packages/xiaomi.nix flakeContext {
+            system = "x86_64-linux";
+          };
+          gfmio-nixos-vm = import ./packages/gfmio-nixos-vm.nix flakeContext {
             system = "x86_64-linux";
           };
         };
