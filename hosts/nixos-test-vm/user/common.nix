@@ -77,9 +77,9 @@
     alacritty = {
       enable = true;
     };
-    picom = {
-      enable = true;
-    };
+    # picom = {
+    #   enable = true;
+    # };
     networking = {
       enable = true;
       enableNetworkManagerApplet = false;

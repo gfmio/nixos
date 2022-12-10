@@ -16,7 +16,7 @@
     ./tmux.nix
     ./kitty.nix
     ./alacritty.nix
-    ./picom.nix
+    # ./picom.nix
     ./networking.nix
     ./gpg.nix
     ./gnome-passwordsafe.nix
