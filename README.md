@@ -1,89 +1,25 @@
-# nixos-vm
+# nixos
 
-This projects contains my nixos vm config.
+My personal nixos config.
 
-## Usage
+* `devShells` contains development shells.
 
-Install nixos from the boot image and copy the contents of this file to `/etc/nixos/configuration.nix`.
+* `homeConfigurations` contains user-specific home-manager configurations. These load one or more `homeModules`.
+* `homeModules` contains home-manager modules, that is groups of home-manager settings.
 
-Then run `nixos-rebuild switch`.
+* `nixosConfigurations` contains system-level NixOS configurations. These load one or more `nixosModules` and home configurations.
+* `nixosModules` contains nixos modules, that is groups of related nixos settings and home configurations.
 
-Install home-manager and copy the contents of `home.nix` to `$HOME/.config/nixpkgs/home.nix`.
+## Development Shells
 
 ```sh
-# Rebuild system packages
-sudo nixos-rebuild switch
-
-# Rebuild user packages
-home-manager switch
+sudo mount -t 9p -o trans=virtio share /media/share -oversion=9p2000.L
+cd /media/share
+sudo nixos-rebuild build --upgrade --impure --flake .#nixos-vm-aarch64-linux
+sudo nixos-rebuild test --upgrade --impure --flake .#nixos-vm-aarch64-linux
+sudo nixos-rebuild switch --upgrade --impure --flake .#nixos-vm-aarch64-linux
 ```
 
-## Plan
-
-- Create VM base images using packer
-- Use Vagrant for locally testing VMs
-- Use nixos for Docker
-
-- Option 1: VM runs with VNC: Use QXL/Spice for optimal performance, check what performance is maximally possible (with and without hardware support)
-- Option 2: VM runs with RDP: No display, just exposes an RDP server, SSH for debugging
-- Option 3: VM runs with graphics card embedded: Use nvidia drivers or similar
-- Option 4: Bare metal runtime with access to all devices, use actual drivers or iommu if used as a hypervisor
-
-## To do
-
-- [x] Split out the main configuration into manageable chunks
-- [ ] Integrate my usual config files
-  - [x] i3
-  - [x] i3status
-  - [ ] i3blocks?
-  - [ ] sway
-  - [x] picom
-  - [x] alacritty
-  - [x] kitty
-  - [x] git
-  - [ ] mako?
-  - [ ] kanshi
-  - [ ] xdg-desktop-portal-wlr
-- [x] Set up home manager
-- [x] Configure common utilities
-  - [x] VS Code
-    - [x] Extensions
-    - [x] Settings
-  - [x] Sublime Text
-  - [x] docker
-  - [x] podman
-  - [x] chromium
-    - [x] extensions
-    - [ ] settings
-  - [x] firefox
-    - [ ] extensions
-    - [ ] settings
-- [x] Have a separate partition for /home
-- [x] create installer iso
-- [x] Verify it works on physical devices
-  - [x] xiaomi
-  - [ ] thinkpad
-- [ ] xrdp
-  - [x] basic support
-  - [x] clipboard support
-  - [ ] audio support
-- [x] Ensure that the clipboard works in RDP sessions (I have no idea why though)
-- [x] RDP and VNC client
-- [ ] Backups
-- [ ] Disk encryption
-- [ ] Add proper installer where you can do disk formatting and feature selection using the UI :)
-
-## Resources
-
-- <https://github.com/angristan/nixos-config/blob/master/configuration.nix>
-- <https://github.com/msfjarvis/dotfiles/blob/main/nixos/home-manager.nix>
-- <https://gist.github.com/AcouBass/4f5bcb3410f14bd5063a718b1d53bc4c>
-- <https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/ananicy/default.nix>
-
-## Firewall
-
-To temporarily open a port (e.g. 3000) in the firewall, run:
-
 ```sh
-sudo iptables -I INPUT 2 -p tcp --dport 3000 -j ACCEPT
+nix build --impure .#packages.x86_64-linux.nixos-vm
 ```
