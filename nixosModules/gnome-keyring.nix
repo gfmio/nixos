@@ -1,4 +1,5 @@
-# gnome-keyring settings
+#
+# gnome-keyring nixos module
 #
 
 { inputs, ... }@flakeContext:

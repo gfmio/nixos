@@ -1,5 +1,5 @@
 #
-# podman nixos module
+# xdg nixos module
 #
 
 { inputs, ... }@flakeContext:
@@ -7,19 +7,22 @@
 
 with lib;
 
-let
-  cfg = config.modules.podman;
+let cfg = config.modules.xdg;
 in {
   imports = [ ];
 
   options = {
     modules = {
-      podman = {
+      xdg = {
         enable = mkOption {
           type = types.bool;
           default = false;
         };
-        dockerCompat = mkOption {
+        wlr = mkOption {
+          type = types.bool;
+          default = true;
+        };
+        gtk = mkOption {
           type = types.bool;
           default = true;
         };
@@ -28,14 +31,11 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # TODO: Fix infinite recursion
-    # modules.docker = mkIf cfg.dockerCompat {
-    #   enable = false;
-    # };
-    virtualisation.podman = {
+    xdg.portal = {
       enable = true;
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = cfg.dockerCompat;
+      wlr.enable = cfg.wlr;
+      # gtk portal needed to make gtk apps happy
+      extraPortals = mkIf cfg.gtk [ pkgs.xdg-desktop-portal-gtk ];
     };
   };
 }

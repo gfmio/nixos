@@ -1,4 +1,5 @@
-# qemu settings
+#
+# qemu nixos module
 #
 
 { inputs, ... }@flakeContext:

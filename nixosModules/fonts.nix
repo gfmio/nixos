@@ -1,4 +1,5 @@
-# Font settings
+#
+# Font nixos module
 #
 
 { inputs, ... }@flakeContext:

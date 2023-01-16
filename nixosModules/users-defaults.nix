@@ -1,4 +1,5 @@
-# User settings
+#
+# users nixos module
 #
 
 { inputs, ... }@flakeContext:

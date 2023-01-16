@@ -1,4 +1,7 @@
-# clamav settings
+#
+# clamav nixos module
+#
+# TODO: Test and customize
 #
 
 { inputs, ... }@flakeContext:

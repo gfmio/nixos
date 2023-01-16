@@ -1,4 +1,5 @@
-# SSH settings
+#
+# SSH nixos module
 #
 
 { inputs, ... }@flakeContext:

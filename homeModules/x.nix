@@ -1,3 +1,10 @@
+#
+# x home module
+#
+# TODO: Fix pointer/cursor
+# TODO: See if other settings need to be customized
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

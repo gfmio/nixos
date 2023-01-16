@@ -1,3 +1,9 @@
+#
+# kitty home module
+#
+# TODO: extract the color config
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

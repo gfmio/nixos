@@ -1,4 +1,7 @@
+#
 # console settings
+#
+# TODO: extract colors
 #
 
 { inputs, ... }@flakeContext:

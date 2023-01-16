@@ -1,3 +1,9 @@
+#
+# networking home module
+#
+# TODO: Investigate if this is truly needed
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

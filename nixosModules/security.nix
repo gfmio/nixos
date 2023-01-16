@@ -1,4 +1,7 @@
-# Security settings
+#
+# Security nixos module
+#
+# TODO: What is missing?
 #
 
 { inputs, ... }@flakeContext:

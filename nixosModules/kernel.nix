@@ -1,4 +1,7 @@
+#
 # Kernel settings
+#
+# TODO: Check what sysctl settings I want
 #
 
 { inputs, ... }@flakeContext:

@@ -1,4 +1,7 @@
-# redshift settings
+#
+# redshift nixos module
+#
+# TODO: Make location customizable
 #
 
 { inputs, ... }@flakeContext:

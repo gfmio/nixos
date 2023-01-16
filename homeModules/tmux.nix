@@ -1,3 +1,9 @@
+#
+# tmux home module
+#
+# TODO: Test and customize further
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

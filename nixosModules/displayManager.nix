@@ -1,4 +1,9 @@
-# Display manager settings
+#
+# Display manager nixos module
+#
+# TODO: Remove gfmio reference
+# TODO: customize further
+# TODO: Add support for other display managers
 #
 
 { inputs, ... }@flakeContext:

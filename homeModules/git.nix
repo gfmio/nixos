@@ -1,3 +1,7 @@
+#
+# git home module
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 
@@ -14,10 +18,7 @@ in {
           type = types.bool;
           default = false;
         };
-        name = mkOption {
-          type = types.str;
-          default = "Frédérique Mittelstaedt";
-        };
+        name = mkOption { type = types.str; };
         email = mkOption { type = types.str; };
       };
     };

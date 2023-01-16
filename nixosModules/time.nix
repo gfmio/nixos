@@ -1,4 +1,5 @@
-# Timezone settings
+#
+# timezone nixos module
 #
 
 { inputs, ... }@flakeContext:

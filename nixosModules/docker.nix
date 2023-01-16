@@ -1,4 +1,5 @@
-# docker settings
+#
+# docker nixos module
 #
 
 { inputs, ... }@flakeContext:
@@ -22,6 +23,9 @@ in {
   };
 
   config = mkIf cfg.enable {
+    # TODO: Fix infinite recursion
+    # modules.podman.dockerCompat = false;
+
     virtualisation.docker = {
       enable = true;
       # Run docker system prune -f periodically

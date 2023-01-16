@@ -1,3 +1,9 @@
+#
+# zsh home module
+#
+# TODO: Further customize OhMyZSHs
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

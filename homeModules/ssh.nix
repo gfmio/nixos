@@ -1,3 +1,7 @@
+#
+# ssh home module
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

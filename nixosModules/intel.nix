@@ -1,4 +1,5 @@
-# Intel settings
+#
+# intel nixos module
 #
 
 { inputs, ... }@flakeContext:

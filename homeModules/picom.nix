@@ -1,3 +1,9 @@
+#
+# picom home module
+#
+# TODO: Fix or remove
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

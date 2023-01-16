@@ -1,4 +1,5 @@
-# i3 settings
+#
+# i3 nixos module
 #
 
 { inputs, ... }@flakeContext:

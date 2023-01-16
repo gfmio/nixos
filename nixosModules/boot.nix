@@ -1,4 +1,7 @@
-# Boot settings
+#
+# boot nixos module
+#
+# TODO: customize further
 #
 
 { inputs, ... }@flakeContext:

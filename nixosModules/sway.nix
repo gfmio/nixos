@@ -1,4 +1,5 @@
-# sway settings
+#
+# sway nixos module
 #
 
 { inputs, ... }@flakeContext:

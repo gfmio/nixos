@@ -1,4 +1,5 @@
-# gfmio user settings
+#
+# gfmio user nixos module
 #
 
 { inputs, ... }@flakeContext:
@@ -19,13 +20,13 @@
       description = "gfmio";
       initialPassword = "password";
       extraGroups = [
-        "wheel"
+        "wheel" # Enable `sudo` for the user.
         "docker"
         "lxd"
         "libvirtd"
         "networkmanager"
         "video"
-      ]; # Enable `sudo` for the user.
+      ];
       shell = pkgs.zsh;
       packages = with pkgs; [ nixfmt ];
     };

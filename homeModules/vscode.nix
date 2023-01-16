@@ -1,3 +1,10 @@
+#
+# vscode home module
+#
+# TODO: Test if you can make the vs code settings modifyable
+# TODO: Update extensions
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

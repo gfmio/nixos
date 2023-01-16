@@ -1,4 +1,8 @@
-# disk encription settings
+#
+# disk encription nixos module
+#
+# TODO: Test and customize
+# TODO: See if this can be used with systemd-boot
 #
 
 { inputs, ... }@flakeContext:
@@ -26,7 +30,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    boot.loader.efi.canTouchEfiVariables = true;
     boot.loader.grub = {
       enable = true;
       version = 2;
@@ -34,7 +37,6 @@ in {
       efiSupport = true;
       enableCryptodisk = true;
     };
-    boot.loader.efi.efiSysMountPoint = "/boot/efi";
     boot.initrd.luks.devices = {
       root = {
         device = cfg.device;

@@ -1,4 +1,8 @@
-# System package settings
+#
+# System package nixos module
+#
+# TODO: Split up
+# TODO: Extract vim config
 #
 
 { inputs, ... }@flakeContext:

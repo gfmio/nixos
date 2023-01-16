@@ -1,4 +1,5 @@
-# i18n / locale settings
+#
+# i18n / locale nixos module
 #
 
 { inputs, ... }@flakeContext:

@@ -1,4 +1,7 @@
-# DNS / dnscrypt / dnsmasq settings
+#
+# DNS / dnscrypt / dnsmasq nixos module
+#
+# TODO: Verify that this actually works as desired
 #
 
 { inputs, ... }@flakeContext:

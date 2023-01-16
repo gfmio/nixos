@@ -1,3 +1,9 @@
+#
+# sublime text home module
+#
+# TODO: Customize sublime text
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

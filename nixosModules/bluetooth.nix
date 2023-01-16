@@ -1,4 +1,7 @@
-# Bluetooth settings
+#
+# bluetooth nixos module
+#
+# TOOD: Add bluetooth tooling
 #
 
 { inputs, ... }@flakeContext:

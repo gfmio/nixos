@@ -1,4 +1,5 @@
-# Printing / CUPS settings
+#
+# Printing / CUPS nixos module
 #
 
 { inputs, ... }@flakeContext:

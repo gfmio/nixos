@@ -1,4 +1,5 @@
-# Nvidia settings
+#
+# nvidia nixos module
 #
 
 { inputs, ... }@flakeContext:

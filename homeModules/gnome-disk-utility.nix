@@ -1,3 +1,7 @@
+#
+# gnome-disk-utility home module
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

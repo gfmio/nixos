@@ -1,5 +1,5 @@
 {
-  description = "Test if this is getting synced";
+  description = "";
   inputs = {
     nixpkgs = { url = "flake:nixpkgs/nixpkgs-unstable"; };
     nixos-generators = {
@@ -90,6 +90,7 @@
         clamav = import ./nixosModules/clamav.nix flakeContext;
         console = import ./nixosModules/console.nix flakeContext;
         cups = import ./nixosModules/cups.nix flakeContext;
+        dbus = import ./nixosModules/dbus.nix flakeContext;
         dconf = import ./nixosModules/dconf.nix flakeContext;
         disk-encryption =
           import ./nixosModules/disk-encryption.nix flakeContext;
@@ -130,7 +131,9 @@
         tor = import ./nixosModules/tor.nix flakeContext;
         users-defaults = import ./nixosModules/users-defaults.nix flakeContext;
         virtualbox = import ./nixosModules/virtualbox.nix flakeContext;
+        wayland = import ./nixosModules/wayland.nix flakeContext;
         x = import ./nixosModules/x.nix flakeContext;
+        xdg = import ./nixosModules/xdg.nix flakeContext;
         xrdp = import ./nixosModules/xrdp.nix flakeContext;
       };
       packages = {

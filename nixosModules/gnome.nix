@@ -1,4 +1,5 @@
-# GNOME settings
+#
+# gnome nixos module
 #
 
 { inputs, ... }@flakeContext:

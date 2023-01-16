@@ -1,4 +1,5 @@
-# xrdp settings
+#
+# xrdp nixos module
 #
 
 { inputs, ... }@flakeContext:
@@ -17,6 +18,10 @@ in {
           type = types.bool;
           default = false;
         };
+        defaultWindowManager = mkOption {
+          type = types.str;
+          default = "";
+        };
       };
     };
   };
@@ -24,8 +29,7 @@ in {
   config = mkIf cfg.enable {
     services.xrdp = {
       enable = true;
-      # TODO: Make this configurable
-      defaultWindowManager = "i3";
+      defaultWindowManager = cfg.defaultWindowManager;
     };
     networking.firewall.allowedTCPPorts = [ 3389 ];
   };

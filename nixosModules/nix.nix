@@ -1,8 +1,9 @@
-# Nix settings
+#
+# nix nixos module
 #
 
 { inputs, ... }@flakeContext:
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 with lib;
 

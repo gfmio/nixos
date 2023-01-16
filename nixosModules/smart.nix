@@ -1,4 +1,5 @@
-# S.M.A.R.T settings
+#
+# S.M.A.R.T nixos module
 #
 
 { inputs, ... }@flakeContext:

@@ -1,3 +1,7 @@
+#
+# chromium home module
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 
@@ -24,9 +28,7 @@ in {
       extensions = [
         { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
         { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; } # 1password
-        {
-          id = "bkdgflcldnnnapblkhphbgpggdiikppg";
-        } # DuckDuckGo Privacy Essentials
+        { id = "bkdgflcldnnnapblkhphbgpggdiikppg"; } # DuckDuckGo Privacy Essentials
         { id = "ghbmnnjooekpmoecnnnilnnbdlolhkhi"; } # Google Docs Offline
         { id = "chphlpgkkbolifaimnlloiipkdnihall"; } # OneTab
         { id = "noonakfaafcdaagngpjehilgegefdima"; } # Vimeo repeat & speed

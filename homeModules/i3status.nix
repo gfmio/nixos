@@ -1,3 +1,7 @@
+#
+# i3status home module
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

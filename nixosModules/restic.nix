@@ -1,3 +1,10 @@
+#
+# restic nixos module
+#
+# TODO: Test and customize
+# TODO: Remove concrete user references
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 

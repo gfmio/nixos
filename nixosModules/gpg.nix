@@ -1,4 +1,5 @@
-# GPG settings
+#
+# gpg nixos module
 #
 
 { inputs, ... }@flakeContext:
@@ -17,6 +18,10 @@ in {
           type = types.bool;
           default = false;
         };
+        enableSSHSupport = mkOption {
+          type = types.bool;
+          default = false;
+        };
       };
     };
   };
@@ -24,7 +29,7 @@ in {
   config = mkIf cfg.enable {
     programs.gnupg.agent = {
       enable = true;
-      enableSSHSupport = true;
+      enableSSHSupport = cfg.enableSSHSupport;
     };
   };
 }

@@ -1,3 +1,7 @@
+#
+# fiefox home module
+#
+
 { inputs, ... }@flakeContext:
 { config, pkgs, lib, ... }:
 
@@ -27,7 +31,7 @@ in {
     programs.firefox = {
       enable = true;
       extensions = with nur.repos.rycee.firefox-addons; [
-        https-everywhere
+        # https-everywhere
         privacy-badger
         ublock-origin
       ];

@@ -1,4 +1,5 @@
-# Hardware settings
+#
+# Hardware nixos module
 #
 
 { inputs, ... }@flakeContext:

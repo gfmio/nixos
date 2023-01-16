@@ -1,4 +1,5 @@
-# X settings
+#
+# X nixos module
 #
 
 { inputs, ... }@flakeContext:

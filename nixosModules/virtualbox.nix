@@ -1,4 +1,7 @@
-# virtualbox settings
+#
+# virtualbox nixos module
+#
+# TODO: Test & customize
 #
 
 { inputs, ... }@flakeContext:

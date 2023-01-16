@@ -1,4 +1,5 @@
-# Misc system settings
+#
+# Misc system settings nixos module
 #
 
 { inputs, ... }@flakeContext:

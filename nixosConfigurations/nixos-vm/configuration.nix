@@ -11,6 +11,7 @@ let
       inputs.self.nixosModules.clamav
       inputs.self.nixosModules.console
       inputs.self.nixosModules.cups
+      inputs.self.nixosModules.dbus
       inputs.self.nixosModules.dconf
       inputs.self.nixosModules.disk-encryption
       inputs.self.nixosModules.displayManager
@@ -50,7 +51,9 @@ let
       inputs.self.nixosModules.tor
       inputs.self.nixosModules.users-defaults
       inputs.self.nixosModules.virtualbox
+      inputs.self.nixosModules.wayland
       inputs.self.nixosModules.x
+      inputs.self.nixosModules.xdg
       inputs.self.nixosModules.xrdp
       {
         home-manager.useGlobalPkgs = true;
@@ -127,9 +130,12 @@ let
           passwordAuthentication = true;
         };
         gpg = { enable = true; };
-        xrdp = { enable = true; };
-        # docker = { enable = true; };
-        podman = { enable = true; };
+        xrdp = {
+          enable = true;
+          defaultWindowManager = "i3";
+        };
+        docker = { enable = false; };
+        podman = { enable = true; dockerCompat = true; };
         lxd = { enable = true; };
         libvirt = { enable = true; };
         virtualbox = { enable = false; };
@@ -145,14 +151,13 @@ let
         dns = { enable = false; };
         tor = { enable = false; };
         redshift = { enable = false; };
+        xdg = { enable = true; gtk = false; };
+        dbus = { enable = true; };
+        wayland = { enable = true; };
       };
 
       services.xserver.windowManager.i3 = { enable = true; };
       programs.sway = { enable = true; };
-
-      security.polkit.enable = true;
-      programs.xwayland.enable = true;
-      services.dbus.enable = true;
 
       # xdg-desktop-portal works by exposing a series of D-Bus interfaces
       # known as portals under a well-known name

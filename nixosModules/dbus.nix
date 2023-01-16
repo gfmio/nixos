@@ -1,7 +1,7 @@
 #
-# thermal nixos module
+# dbus nixos module
 #
-# TODO: Test & customize
+# TODO: Test and customize
 #
 
 { inputs, ... }@flakeContext:
@@ -9,13 +9,13 @@
 
 with lib;
 
-let cfg = config.modules.thermal;
+let cfg = config.modules.dbus;
 in {
   imports = [ ];
 
   options = {
     modules = {
-      thermal = {
+      dbus = {
         enable = mkOption {
           type = types.bool;
           default = false;
@@ -25,7 +25,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # Thermals and cooling
-    services.thermald.enable = true;
+    services.dbus.enable = true;
   };
 }

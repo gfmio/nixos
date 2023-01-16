@@ -1,7 +1,7 @@
 #
-# thermal nixos module
+# wayland nixos module
 #
-# TODO: Test & customize
+# TODO: Test and customize
 #
 
 { inputs, ... }@flakeContext:
@@ -9,13 +9,13 @@
 
 with lib;
 
-let cfg = config.modules.thermal;
+let cfg = config.modules.wayland;
 in {
   imports = [ ];
 
   options = {
     modules = {
-      thermal = {
+      wayland = {
         enable = mkOption {
           type = types.bool;
           default = false;
@@ -25,7 +25,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # Thermals and cooling
-    services.thermald.enable = true;
+    security.polkit.enable = true;
+    programs.xwayland.enable = true;
   };
 }

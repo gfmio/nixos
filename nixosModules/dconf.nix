@@ -1,4 +1,7 @@
-# dconf settings
+#
+# dconf nixos module
+#
+# TODO: Test and customize
 #
 
 { inputs, ... }@flakeContext:

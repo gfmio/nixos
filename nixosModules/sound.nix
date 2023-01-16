@@ -1,4 +1,7 @@
-# Sound settings
+#
+# sound settings
+#
+# TODO: Test and customize, in particular pipewire
 #
 
 { inputs, ... }@flakeContext:

@@ -1,5 +1,12 @@
+# Home configurations
+
+Home configurations are entire configurations for home-manager. They import and configure home modules and define the entire environment for a user.
+
+## Implementation
+
+```nix
 #
-# gfmio home configuration
+# Example home configuration
 #
 
 { inputs, ... }@flakeContext:
@@ -32,8 +39,8 @@ let
       # Add additional settings for the user here.
       # Most should be managed via other modules though
       home.stateVersion = "23.05";
-      home.username = "gfmio";
-      home.homeDirectory = "/home/gfmio";
+      home.username = "USERNAME";
+      home.homeDirectory = "/home/USERNAME";
       programs.home-manager.enable = true;
       nixpkgs.config.allowUnfree = true;
       home.packages = with pkgs; [ ];
@@ -57,7 +64,6 @@ let
         ssh = { enable = true; };
         git = {
           enable = true;
-          name = "Frédérique Mittelstaedt";
           email = "git@gfm.io";
         };
         zsh = { enable = true; };
@@ -77,10 +83,52 @@ let
       };
     };
   };
-  nixosModule = { ... }: { home-manager.users.gfmio = homeModule; };
+  nixosModule = { ... }: { home-manager.users.USERNAME = homeModule; };
 in ((inputs.home-manager.lib.homeManagerConfiguration {
   modules = [ homeModule ];
   pkgs = lib.getAttr system inputs.nixpkgs.legacyPackages;
 }) // {
   inherit nixosModule;
 })
+```
+
+## Usage
+
+To associate a home configuration with a user, add it as an import to the user's nixos module.
+
+```nix
+#
+# example user settings
+#
+
+{ inputs, ... }@flakeContext:
+{ system }:
+{ config, pkgs, lib, ... }: {
+  imports = [
+    (inputs.self.homeConfigurations.USERNAME {
+      lib = lib;
+      system = system;
+    }).nixosModule
+  ];
+
+  options = { };
+
+  config = {
+    users.users.USERNAME = {
+      isNormalUser = true;
+      description = "USERNAME";
+      initialPassword = "password";
+      extraGroups = [
+        "wheel" # Enable `sudo` for the user.
+        "docker"
+        "lxd"
+        "libvirtd"
+        "networkmanager"
+        "video"
+      ];
+      shell = pkgs.zsh;
+      packages = with pkgs; [];
+    };
+  };
+}
+```

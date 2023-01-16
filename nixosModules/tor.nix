@@ -1,4 +1,7 @@
+#
 # tor settings
+#
+# TODO: Test and customize
 #
 
 { inputs, ... }@flakeContext:
