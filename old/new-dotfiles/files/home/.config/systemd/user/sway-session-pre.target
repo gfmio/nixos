@@ -1,5 +1,0 @@
-[Unit]
-Description=sway compositor session
-Documentation=man:systemd.special(7)
-BindsTo=graphical-session-pre.target
-

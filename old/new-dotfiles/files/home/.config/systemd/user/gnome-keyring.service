@@ -1,9 +1,0 @@
-[Unit]
-Description=GNOME Keyring
-OnFailureJobMode=replace-irreversibly
-CollectMode=inactive-or-failed
-Before=sway.service
-
-[Service]
-Type=oneshot
-ExecStart=/bin/sh -c 'eval $(/usr/bin/gnome-keyring-daemon --components=ssh,secrets,pkcs11 --start); export SSH_AUTH_SOCK; /usr/bin/systemctl --user import-environment SSH_AUTH_SOCK;'

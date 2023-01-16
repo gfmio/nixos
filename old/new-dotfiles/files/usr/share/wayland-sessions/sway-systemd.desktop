@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Sway (systemd)
-Comment=SirCmpwn's Wayland window manager as a systemd service
-Exec=/usr/local/bin/sway-service
-Type=Application
-

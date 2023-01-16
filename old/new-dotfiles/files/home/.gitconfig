@@ -1,7 +1,0 @@
-[user]
-	email = git@gfm.io
-	name = Frédérique Mittelstaedt
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
