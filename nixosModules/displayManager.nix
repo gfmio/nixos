@@ -22,7 +22,7 @@ in {
           type = types.bool;
           default = false;
         };
-        displayManager = mkOption { type = types.enum [ "gdm" "lightdm" ]; };
+        displayManager = mkOption { type = types.enum [ "gdm" "lightdm" "greetd" ]; };
         defaultSession = mkOption { type = types.str; };
       };
     };
@@ -33,6 +33,16 @@ in {
     services.xserver.displayManager.lightdm.enable =
       (cfg.displayManager == "lightdm");
     services.xserver.displayManager.defaultSession = cfg.defaultSession;
+
+    services.greetd = mkIf (cfg.displayManager == "greetd") {
+      enable = true;
+      settings = {
+        default_session = {
+          # TODO: Change
+          command = "${pkgs.greetd.greetd}/bin/agreety --cmd sway";
+        };
+      };
+    };
 
     nixpkgs = mkIf (cfg.displayManager == "gdm") {
       overlays = [
