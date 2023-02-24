@@ -28,6 +28,7 @@ let
       inputs.self.nixosModules.intel
       inputs.self.nixosModules.kernel
       inputs.self.nixosModules.libvirt
+      inputs.self.nixosModules.logind
       inputs.self.nixosModules.lxd
       inputs.self.nixosModules.netdata
       inputs.self.nixosModules.networking
@@ -154,6 +155,7 @@ let
         xdg = { enable = true; gtk = false; };
         dbus = { enable = true; };
         wayland = { enable = true; };
+        logind = { enable = false; };
       };
 
       services.xserver.windowManager.i3 = { enable = true; };

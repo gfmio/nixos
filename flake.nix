@@ -108,6 +108,7 @@
         intel = import ./nixosModules/intel.nix flakeContext;
         kernel = import ./nixosModules/kernel.nix flakeContext;
         libvirt = import ./nixosModules/libvirt.nix flakeContext;
+        logind = import ./nixosModules/logind.nix flakeContext;
         lxd = import ./nixosModules/lxd.nix flakeContext;
         netdata = import ./nixosModules/netdata.nix flakeContext;
         networking = import ./nixosModules/networking.nix flakeContext;
