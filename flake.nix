@@ -60,6 +60,7 @@
         kitty = import ./homeModules/kitty.nix flakeContext;
         networking = import ./homeModules/networking.nix flakeContext;
         picom = import ./homeModules/picom.nix flakeContext;
+        slack = import ./homeModules/slack.nix flakeContext;
         ssh = import ./homeModules/ssh.nix flakeContext;
         sublime = import ./homeModules/sublime.nix flakeContext;
         sway = import ./homeModules/sway.nix flakeContext;

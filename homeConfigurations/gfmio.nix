@@ -20,6 +20,7 @@ let
       inputs.self.homeModules.kitty
       inputs.self.homeModules.networking
       inputs.self.homeModules.picom
+      inputs.self.homeModules.slack
       inputs.self.homeModules.ssh
       inputs.self.homeModules.sublime
       inputs.self.homeModules.sway
@@ -74,6 +75,7 @@ let
         gnome-passwordsafe = { enable = true; };
         sway = { enable = true; };
         gnome-disk-utility = { enable = true; };
+        slack = { enable = true; };
       };
     };
   };
