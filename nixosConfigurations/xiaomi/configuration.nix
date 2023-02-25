@@ -126,8 +126,8 @@ let
           defaultSession = "sway";
         };
         gnome = { enable = false; };
-        sway = { enable = false; };
-        i3 = { enable = false; };
+        sway = { enable = true; };
+        i3 = { enable = true; };
         dconf = { enable = true; };
         users-defaults = { enable = true; };
         cups = { enable = true; };
@@ -164,8 +164,8 @@ let
         logind = { enable = true; };
       };
 
-      services.xserver.windowManager.i3 = { enable = true; };
-      programs.sway = { enable = true; };
+      # services.xserver.windowManager.i3 = { enable = true; };
+      # programs.sway = { enable = true; };
     };
   };
 in inputs.nixpkgs.lib.nixosSystem {
