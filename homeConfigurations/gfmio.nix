@@ -12,6 +12,7 @@ let
       inputs.self.homeModules.firefox
       inputs.self.homeModules.git
       inputs.self.homeModules.gnomeDiskUtility
+      inputs.self.homeModules.gnomeKeyring
       inputs.self.homeModules.gnomePasswordsafe
       inputs.self.homeModules.gpg
       inputs.self.homeModules.htop
@@ -76,6 +77,7 @@ let
         sway = { enable = true; };
         gnome-disk-utility = { enable = true; };
         slack = { enable = true; };
+        gnome-keyring = { enable = false; };
       };
     };
   };

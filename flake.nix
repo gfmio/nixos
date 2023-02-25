@@ -51,6 +51,8 @@
         git = import ./homeModules/git.nix flakeContext;
         gnomeDiskUtility =
           import ./homeModules/gnome-disk-utility.nix flakeContext;
+        gnomeKeyring =
+          import ./homeModules/gnome-keyring.nix flakeContext;
         gnomePasswordsafe =
           import ./homeModules/gnome-passwordsafe.nix flakeContext;
         gpg = import ./homeModules/gpg.nix flakeContext;

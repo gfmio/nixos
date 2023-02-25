@@ -7,8 +7,10 @@
 
 with lib;
 
-let cfg = config.modules.gnome-disk-utility;
-in {
+let
+  cfg = config.modules.gnome-disk-utility;
+in
+{
   imports = [ ];
 
   options = {
