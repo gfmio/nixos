@@ -132,7 +132,7 @@ in {
       # php73
       # php73Packages.composer
       # python27Full
-      # python37Full
+      python39Full
       # go_1_12
       # shellcheck
       git
@@ -140,7 +140,7 @@ in {
       # rubocop
       gtk3
       glade
-      pkgconfig
+      pkg-config
       # Compiler and debugger
       gcc
       gdb
@@ -156,8 +156,8 @@ in {
       # as (assembler) and ld, ld.bfd, ld.gold (linkers)
       binutils
       # Else
-      # spotify # not compatible with aarch64
-      # slack # not compatible with aarch64
+      # spotify
+      # slack
       # filezilla
       # ansible
       # terraform_0_12
@@ -202,8 +202,18 @@ in {
       jnettop
       zip
 
+      networkmanager-openvpn
+      openvpn
+      networkmanagerapplet
+
+      kubectl
+      tilt
+
+      p11-kit
+
       # https://www.mpscholten.de/nixos/2016/04/11/setting-up-vim-on-nixos.html
-      (with import <nixpkgs> { };
+      (
+        with import <nixpkgs> {};
 
         vim_configurable.customize {
           # Specifies the vim binary name
@@ -230,7 +240,8 @@ in {
             colorscheme pablo
             set backspace=indent,eol,start " backspace over everything in insert mode
           '';
-        })
+        }
+      )
     ];
 
     #
