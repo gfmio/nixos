@@ -26,10 +26,6 @@ in {
 
   config = mkIf cfg.enable {
     nixpkgs.overlays = [
-      (import (builtins.fetchGit {
-        url = "git@github.snooguts.net:frederique-mittelstaedt/reddit-nix.git";
-      }))
-
       (
         self: super: {
           slack = super.slack.overrideAttrs (old: {
@@ -45,8 +41,6 @@ in {
         }
       )
     ];
-
-
 
     home.packages = with pkgs; [ slack ]; };
 }
