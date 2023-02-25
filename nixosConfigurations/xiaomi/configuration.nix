@@ -52,6 +52,7 @@ let
       inputs.self.nixosModules.tor
       inputs.self.nixosModules.users-defaults
       inputs.self.nixosModules.virtualbox
+      inputs.self.nixosModules.wayland
       inputs.self.nixosModules.x
       inputs.self.nixosModules.xdg
       inputs.self.nixosModules.xrdp
