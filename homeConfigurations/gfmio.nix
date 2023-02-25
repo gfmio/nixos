@@ -37,7 +37,7 @@ let
       home.username = "gfmio";
       home.homeDirectory = "/home/gfmio";
       programs.home-manager.enable = true;
-      nixpkgs.config.allowUnfree = true;
+      # nixpkgs.config.allowUnfree = true;
       home.packages = with pkgs; [ ];
 
       modules = {
