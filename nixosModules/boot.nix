@@ -20,6 +20,14 @@ in {
           type = types.bool;
           default = false;
         };
+        loader = mkOption {
+          type = types.enum [ "systemd-boot" "grub" ];
+          default = "systemd-boot";
+        };
+        plymouth = mkOption {
+          type = types.bool;
+          default = true;
+        };
       };
     };
   };
@@ -27,19 +35,27 @@ in {
   config = mkIf cfg.enable {
     boot = {
       loader = {
+        efi = {
+          canTouchEfiVariables = true;
+          efiSysMountPoint = "/boot/efi";
+        };
+        # Use grub
+        grub = {
+          enable = (cfg.loader == "grub");
+          version = 2;
+          efiSupport = true;
+          # Define on which hard drive you want to install Grub.
+          # device = "/dev/sda";
+        };
         # Use the systemd-boot EFI boot loader.
         systemd-boot = {
-          enable = true;
+          enable = (cfg.loader == "systemd-boot");
           # Bigger console font
           consoleMode = "2";
           # Prohibits gaining root access by passing init=/bin/sh as a kernel parameter
           editor = false;
           # Disable memtest86
           memtest86.enable = false;
-        };
-        efi = {
-          canTouchEfiVariables = true;
-          efiSysMountPoint = "/boot/efi";
         };
       };
 
@@ -48,7 +64,7 @@ in {
 
       # Plymouth boot splash screen
       plymouth = {
-        enable = true;
+        enable = cfg.plymouth;
         theme = "breeze";
         # themePackages = with pkgs; [ breeze-plymouth ];
       };
@@ -75,14 +91,6 @@ in {
     # initrd.luks.devices."cryptroot" = {
     #   keyFile = "/dev/sdb";
     #   keyFileSize = 4096;
-    # };
-    # loader = {
-    #   grub = {
-    #   enable = true;
-    #   version = 2;
-    # # Define on which hard drive you want to install Grub.
-    #   device = "/dev/sda";
-    #   };
     # };
 
     # swapDevices = [ { device = "/swapfile"; size = 4096; } ];
