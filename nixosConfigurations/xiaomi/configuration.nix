@@ -72,6 +72,7 @@ let
 
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
+      nixpkgs.config.allowBroken = true;
 
       modules = {
         hardware = {
@@ -166,9 +167,6 @@ let
         wayland = { enable = true; };
         logind = { enable = true; };
       };
-
-      # services.xserver.windowManager.i3 = { enable = true; };
-      # programs.sway = { enable = true; };
     };
   };
 in inputs.nixpkgs.lib.nixosSystem {

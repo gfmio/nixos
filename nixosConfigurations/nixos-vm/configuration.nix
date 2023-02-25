@@ -72,6 +72,7 @@ let
 
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
+      nixpkgs.config.allowBroken = true;
 
       modules = {
         hardware = {
@@ -115,13 +116,12 @@ let
         displayManager = {
           enable = true;
           displayManager = "gdm";
-          defaultSession = "gnome";
+          defaultSession = "sway";
           # defaultSession = "none+i3";
         };
-        gnome = { enable = true; };
-        # sway = { enable = true; };
-        sway = { enable = false; };
-        i3 = { enable = false; };
+        gnome = { enable = false; };
+        sway = { enable = true; };
+        i3 = { enable = true; };
         dconf = { enable = true; };
         users-defaults = { enable = true; };
         cups = { enable = true; };
@@ -158,34 +158,14 @@ let
         logind = { enable = false; };
       };
 
-      services.xserver.windowManager.i3 = { enable = true; };
-      programs.sway = { enable = true; };
-
-      # xdg-desktop-portal works by exposing a series of D-Bus interfaces
-      # known as portals under a well-known name
-      # (org.freedesktop.portal.Desktop) and object path
-      # (/org/freedesktop/portal/desktop).
-      # The portal interfaces include APIs for file access, opening URIs,
-      # printing and others.
-
-      xdg.portal = {
-        enable = true;
-        wlr.enable = true;
-        # gtk portal needed to make gtk apps happy
-        # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      };
-      # # Enable the GNOME Desktop Environment.
-      # services.xserver.displayManager.gdm.enable = true;
-      # services.xserver.desktopManager.gnome.enable = true;
-
       # nixpkgs.system-features = [ "gccarch-armv8-a" "nixos-test" "benchmark" "big-parallel" "kvm" ];
 
       # nixConfig.aarch64-darwin.extra-platforms = [ "x86_64-darwin" ];
-      nix.extraOptions = ''
-        extra-platforms = x86_64-linux
-      '';
+      # nix.extraOptions = ''
+      #   extra-platforms = x86_64-linux
+      # '';
 
-      boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
+      # boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
     };
   };
 in inputs.nixpkgs.lib.nixosSystem {
