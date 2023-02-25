@@ -6,7 +6,7 @@ with lib;
 let
   super = "Mod4";
   alt = "Mod1";
-  mod = "Mod1";
+  mod = "Mod4";
   ctrl = "Ctrl";
 
   systemMode = "L: lock · O: logout · S: suspend · R: reboot · P: poweroff";
