@@ -24,9 +24,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    hardware.opengl.enable = true;
-    hardware.opengl.driSupport = true;
-    hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+      extraPackages = [ pkgs.mesa.drivers ];
+    };
 
     # Enable all the firmware
     hardware.enableAllFirmware = true;
