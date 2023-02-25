@@ -26,7 +26,7 @@ in {
           type = types.bool;
           default = false;
         };
-        openPort = {
+        openPort = mkOption {
           type = types.bool;
           default = false;
         };
