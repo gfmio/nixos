@@ -121,10 +121,11 @@ let
         displayManager = {
           enable = true;
           displayManager = "gdm";
-          defaultSession = "gnome";
+          # defaultSession = "gnome";
           # defaultSession = "none+i3";
+          defaultSession = "sway";
         };
-        gnome = { enable = true; };
+        gnome = { enable = false; };
         sway = { enable = false; };
         i3 = { enable = false; };
         dconf = { enable = true; };
@@ -165,23 +166,6 @@ let
 
       services.xserver.windowManager.i3 = { enable = true; };
       programs.sway = { enable = true; };
-
-      # xdg-desktop-portal works by exposing a series of D-Bus interfaces
-      # known as portals under a well-known name
-      # (org.freedesktop.portal.Desktop) and object path
-      # (/org/freedesktop/portal/desktop).
-      # The portal interfaces include APIs for file access, opening URIs,
-      # printing and others.
-
-      # xdg.portal = {
-      #   enable = true;
-      #   wlr.enable = true;
-      #   # gtk portal needed to make gtk apps happy
-      #   # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      # };
-      # # Enable the GNOME Desktop Environment.
-      # services.xserver.displayManager.gdm.enable = true;
-      # services.xserver.desktopManager.gnome.enable = true;
     };
   };
 in inputs.nixpkgs.lib.nixosSystem {
