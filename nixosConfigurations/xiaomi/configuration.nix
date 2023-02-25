@@ -173,12 +173,12 @@ let
       # The portal interfaces include APIs for file access, opening URIs,
       # printing and others.
 
-      xdg.portal = {
-        enable = true;
-        wlr.enable = true;
-        # gtk portal needed to make gtk apps happy
-        # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      };
+      # xdg.portal = {
+      #   enable = true;
+      #   wlr.enable = true;
+      #   # gtk portal needed to make gtk apps happy
+      #   # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      # };
       # # Enable the GNOME Desktop Environment.
       # services.xserver.displayManager.gdm.enable = true;
       # services.xserver.desktopManager.gnome.enable = true;
