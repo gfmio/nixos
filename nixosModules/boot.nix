@@ -28,6 +28,10 @@ in {
           type = types.bool;
           default = true;
         };
+        efiSysMountPoint = mkOption {
+          type = types.str;
+          default = "/boot/efi";
+        };
       };
     };
   };
@@ -37,7 +41,7 @@ in {
       loader = {
         efi = {
           canTouchEfiVariables = true;
-          efiSysMountPoint = "/boot/efi";
+          efiSysMountPoint = cfg.efiSysMountPoint;
         };
         # Use grub
         grub = {

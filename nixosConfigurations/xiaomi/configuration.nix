@@ -87,7 +87,10 @@ let
           };
           qemu = { enable = false; };
         };
-        boot = { enable = true; };
+        boot = {
+          enable = true;
+          efiSysMountPoint = "/boot";
+        };
         kernel = { enable = true; };
         system = { enable = true; };
         diskEncryption = { enable = false; };
