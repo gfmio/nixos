@@ -26,6 +26,10 @@ in {
           type = types.bool;
           default = false;
         };
+        openPort = {
+          type = types.bool;
+          default = false;
+        };
       };
     };
   };
@@ -37,6 +41,6 @@ in {
       startWhenNeeded = true;
       passwordAuthentication = cfg.passwordAuthentication;
     };
-    networking.firewall.allowedTCPPorts = [ 22 ];
+    networking.firewall = mkIf cfg.openPort { allowedTCPPorts = [ 22 ]; };
   };
 }
