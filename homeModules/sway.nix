@@ -38,11 +38,11 @@ in {
         commonOptions.config
         { output = { "*" = { bg = "~/.background-image fill"; }; }; }
         { startup = [
-          { command = "dbus-sway-environment"; always = true; }
-          { command = "configure-gtk"; always = true; }
-        ]
-        # set $menu bemenu-run
-        # bindsym $mod+c exec grim  -g "$(slurp)" /tmp/$(date +'%H:%M:%S.png')
+            { command = "dbus-sway-environment"; always = true; }
+            { command = "configure-gtk"; always = true; }
+          ];
+          # set $menu bemenu-run
+          # bindsym $mod+c exec grim  -g "$(slurp)" /tmp/$(date +'%H:%M:%S.png')
         }
       ];
     };
