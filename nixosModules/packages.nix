@@ -211,6 +211,14 @@ in {
 
       p11-kit
 
+      nwg-menu
+      nwg-panel
+      nwg-drawer
+      nwg-wrapper
+      nwg-bar
+      # nwg-dock
+      nwg-launchers
+
       # https://www.mpscholten.de/nixos/2016/04/11/setting-up-vim-on-nixos.html
       (
         with import <nixpkgs> {};
