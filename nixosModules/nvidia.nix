@@ -72,6 +72,18 @@ in {
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia.modesetting.enable = true;
 
+    hardware.nvidia.open = true;
+
+    hardware.opengl = {
+      extraPackages = with pkgs; [
+        mpi
+        linuxPackages.nvidia_x11
+        # can't remember which is needed:
+        # cudatoolkit
+        # cudatoolkit.lib
+      ];
+    };
+
     # GDM
     services.xserver.displayManager.gdm.wayland = true;
 
