@@ -25,6 +25,11 @@ in {
   config = mkIf cfg.enable {
     programs.chromium = {
       enable = true;
+      commandLineArgs = [
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
+        "--enable-features=WebRTCPipeWireCapturer"
+      ];
       extensions = [
         { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
         { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; } # 1password

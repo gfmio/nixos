@@ -47,8 +47,6 @@ in {
       ];
     };
 
-    nixpkgs.config.chromium.commandLineArgs = "--enable-features=WebRTCPipeWireCapturer --enable-features=UseOzonePlatform --ozone-platform=wayland";
-
     # environment.systemPackages = with pkgs; [
     #   alacritty # gpu accelerated terminal
     #   sway
