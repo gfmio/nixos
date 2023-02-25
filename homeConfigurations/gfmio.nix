@@ -28,6 +28,7 @@ let
       inputs.self.homeModules.tmux
       inputs.self.homeModules.vscode
       inputs.self.homeModules.x
+      inputs.self.homeModules.xdg
       inputs.self.homeModules.zsh
     ];
     config = {
@@ -78,6 +79,7 @@ let
         gnome-disk-utility = { enable = true; };
         slack = { enable = true; };
         gnome-keyring = { enable = false; };
+        xdg = { enable = true; };
       };
     };
   };

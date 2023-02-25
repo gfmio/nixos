@@ -69,6 +69,7 @@
         tmux = import ./homeModules/tmux.nix flakeContext;
         vscode = import ./homeModules/vscode.nix flakeContext;
         x = import ./homeModules/x.nix flakeContext;
+        xdg = import ./homeModules/xdg.nix flakeContext;
         zsh = import ./homeModules/zsh.nix flakeContext;
       };
       nixosConfigurations = {
