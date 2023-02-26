@@ -70,11 +70,15 @@ let
       # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
       system.stateVersion = "23.05"; # Did you read the comment?
 
-      # Allow unfree packages
+      # Allow unfree and broken packages
       nixpkgs.config.allowUnfree = true;
       nixpkgs.config.allowBroken = true;
 
       modules = {
+        #
+        # Basic system settings
+        #
+
         hardware = {
           enable = true;
           # Enable nvidia, qemu or neither
@@ -95,9 +99,6 @@ let
         kernel = { enable = true; };
         system = { enable = true; };
         diskEncryption = { enable = false; };
-        smart = { enable = true; };
-        thermal = { enable = true; };
-        power = { enable = true; };
         time = {
           enable = true;
           timeZone = "Europe/London";
@@ -120,8 +121,30 @@ let
           };
           console = { keyMap = "us"; };
         };
+        ssh = {
+          enable = true;
+          permitRootLogin = false;
+          passwordAuthentication = true;
+        };
+        users-defaults = { enable = true; };
+
+        #
+        # Desktop
+        #
+
+        smart = { enable = true; };
+        thermal = { enable = true; };
+        power = { enable = true; };
         sound = { enable = true; };
+        cups = { enable = true; };
+        xdg = { enable = true; };
+        dconf = { enable = true; };
+        dbus = { enable = true; };
+        logind = { enable = true; };
+        # gnome-keyring = { enable = true; };
+
         x = { enable = true; };
+        wayland = { enable = true; };
         displayManager = {
           enable = true;
           displayManager = "gdm";
@@ -132,14 +155,11 @@ let
         gnome = { enable = false; };
         sway = { enable = true; };
         i3 = { enable = true; };
-        dconf = { enable = true; };
-        users-defaults = { enable = true; };
-        cups = { enable = true; };
-        ssh = {
-          enable = true;
-          permitRootLogin = false;
-          passwordAuthentication = true;
-        };
+
+        #
+        # Applications
+        #
+
         gpg = { enable = true; };
         xrdp = {
           enable = true;
@@ -155,17 +175,12 @@ let
         restic = { enable = false; };
         flatpak = { enable = true; };
         clamav = { enable = false; };
-        # gnome-keyring = { enable = true; };
         netdata = { enable = true; };
         bluetooth = { enable = true; };
         syncthing = { enable = false; };
         dns = { enable = false; };
         tor = { enable = false; };
         redshift = { enable = false; };
-        xdg = { enable = true; };
-        dbus = { enable = true; };
-        wayland = { enable = true; };
-        logind = { enable = true; };
       };
     };
   };
