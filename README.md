@@ -52,3 +52,21 @@ Use
 ```systemd
 Requires=xdg-desktop-autostart.target
 ```
+
+## To Do
+
+* [ ] Set up impermanence
+* [ ] Ensure the desktop setup works reliably as expected
+  * [ ] sway
+  * [ ] i3
+  * [ ] gnome
+  * [ ] support for multiple displays with auto-switching and saved monitor settings
+  * [ ] SSH key management, GPG key management, Secrets store
+  * [ ] dconf, dbus, gtk apps, ...
+  * [ ] bluetooth
+  * [ ] sound, speakers, microphones
+  * [ ] camera
+  * [ ] screen sharing
+* [ ] add nwg-shell to sway
+* [ ] use podman instead of docker
+* [ ] Go through all of the TODOs in code and resolve them
