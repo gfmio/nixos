@@ -57,6 +57,18 @@ in {
           type = types.bool;
           default = false;
         };
+        verbose = mkOption {
+          type = types.bool;
+          default = true;
+        };
+        debug = mkOption {
+          type = types.bool;
+          default = true;
+        };
+        unsupportedGPU = mkOption {
+          type = types.bool;
+          default = false;
+        };
       };
     };
   };
@@ -80,6 +92,10 @@ in {
       bemenu # wayland clone of dmenu
       mako # notification system developed by swaywm maintainer
     ];
+
+    # environment.variables = {
+    #   WLR_NO_HARDWARE_CURSORS = "1";
+    # };
 
     services.pipewire = {
       enable = true;
@@ -116,8 +132,11 @@ in {
         wl-clipboard
         brightnessctl
       ];
-      # extraOptions = [ "--verbose" "--debug" "--unsupported-gpu" ];
-      extraOptions = [ "--verbose" "--debug" ];
+      extraOptions = (
+        (if cfg.verbose then ["--verbose"] else []) ++
+        (if cfg.debug then ["--debug"] else []) ++
+        (if cfg.unsupportedGPU then ["--unsupported-gpu"] else [])
+      );
     };
 
     programs.xwayland.enable = true;
