@@ -25,6 +25,7 @@
         "lxd"
         "libvirtd"
         "networkmanager"
+        "audio"
         "video"
       ];
       shell = pkgs.zsh;
