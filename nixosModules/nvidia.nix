@@ -72,7 +72,7 @@ in {
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia.modesetting.enable = true;
 
-    hardware.nvidia.open = true;
+    hardware.nvidia.open = false;
 
     hardware.opengl = {
       extraPackages = with pkgs; [
