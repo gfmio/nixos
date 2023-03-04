@@ -34,5 +34,7 @@ in {
     hardware.bluetooth.enable = true;
     # Don't power up the default Bluetooth controller on boot
     hardware.bluetooth.powerOnBoot = cfg.powerOnBoot;
+
+    services.blueman.enable = true;
   };
 }
