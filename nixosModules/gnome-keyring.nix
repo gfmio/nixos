@@ -25,5 +25,7 @@ in {
   config = mkIf cfg.enable {
     # Enable GNOME Keyring daemon
     services.gnome.gnome-keyring.enable = true;
+
+    programs.seahorse.enable = true;
   };
 }
