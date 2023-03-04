@@ -73,16 +73,24 @@
         zsh = import ./homeModules/zsh.nix flakeContext;
       };
       nixosConfigurations = {
+        # Desktop PC NixOS VM
+        gfmio-nixos-vm =
+          import ./nixosConfigurations/nixos-vm/configuration.nix flakeContext {
+            system = "x86_64-linux";
+          };
+        # Xiaomi notebook
+        xiaomi =
+          import ./nixosConfigurations/xiaomi/configuration.nix flakeContext {
+            system = "x86_64-linux";
+          };
+        # UTM NixOS VM on macOS
         nixos-vm-aarch64-linux =
           import ./nixosConfigurations/nixos-vm/configuration.nix flakeContext {
             system = "aarch64-linux";
           };
+        # Same buy for amd64 (currently unused)
         nixos-vm-x86_64-linux =
           import ./nixosConfigurations/nixos-vm/configuration.nix flakeContext {
-            system = "x86_64-linux";
-          };
-        xiaomi-x86_64-linux =
-          import ./nixosConfigurations/xiaomi/configuration.nix flakeContext {
             system = "x86_64-linux";
           };
       };
