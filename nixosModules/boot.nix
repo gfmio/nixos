@@ -32,6 +32,10 @@ in {
           type = types.str;
           default = "/boot/efi";
         };
+        growPartitions = mkOption {
+          type = types.bool;
+          default = false;
+        };
       };
     };
   };
@@ -72,6 +76,9 @@ in {
         theme = "breeze";
         # themePackages = with pkgs; [ breeze-plymouth ];
       };
+
+      # Automatically grow partitions
+      growPartitions = cfg.growPartitions;
     };
 
     # # The encrypted disk that should be opened before the root filesystem is mounted
