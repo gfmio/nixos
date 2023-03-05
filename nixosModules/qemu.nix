@@ -19,6 +19,10 @@ in {
             type = types.bool;
             default = false;
           };
+          enableVideoDrivers = mkOption {
+            type = types.bool;
+            default = false;
+          };
         };
       };
     };
@@ -26,7 +30,7 @@ in {
 
   config = mkIf cfg.enable {
     # Drivers
-    services.xserver.videoDrivers = [ "qxl" "modesetting" "fbdev" ];
+    services.xserver.videoDrivers = mkIf cfg.enableVideoDrivers [ "qxl" "modesetting" "fbdev" ];
 
     # Guest utilities
     services.qemuGuest.enable = true;
