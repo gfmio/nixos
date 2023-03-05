@@ -47,7 +47,7 @@ let
           scale = 2.0;
         };
         i3 = { enable = false; };
-        sway = { enable = false; };
+        sway = { enable = true; };
         i3status = {
           enable = true;
           ipv6 = false;
