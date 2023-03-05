@@ -84,6 +84,14 @@ in {
     #   ];
     # };
 
+    services.xserver.screenSection = ''
+      Option         "metamodes" "nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+      Option         "AllowIndirectGLXProtocol" "off"
+      Option         "TripleBuffer" "on"
+    '';
+
+    hardware.nvidia.powerManagement.enable = true;
+
     # GDM
     services.xserver.displayManager.gdm.wayland = true;
 
