@@ -75,7 +75,7 @@
       nixosConfigurations = {
         # Desktop PC NixOS VM
         gfmio-nixos-vm =
-          import ./nixosConfigurations/nixos-vm/configuration.nix flakeContext {
+          import ./nixosConfigurations/gfmio-nixos-vm/configuration.nix flakeContext {
             system = "x86_64-linux";
           };
         # Xiaomi notebook
