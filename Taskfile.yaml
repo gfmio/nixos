@@ -1,0 +1,21 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars: {}
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+    silent: true
+  gfmio-nixos-vm:build:
+    cmds:
+      - sudo nixos-rebuild build --upgrade --impure --flake .#gfmio-nixos-vm
+  gfmio-nixos-vm:test:
+    cmds:
+      - sudo nixos-rebuild test --upgrade --impure --flake .#gfmio-nixos-vm
+  gfmio-nixos-vm:switch:
+    cmds:
+      - sudo nixos-rebuild switch --upgrade --impure --flake .#gfmio-nixos-vm
+
