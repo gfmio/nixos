@@ -32,8 +32,8 @@ in {
     wayland.windowManager.sway = {
       enable = true;
       wrapperFeatures.gtk = true;
-      # extraOptions = [ "--verbose" "--debug" "--unsupported-gpu" ];
-      extraOptions = [ "--verbose" "--debug" ];
+      extraOptions = [ "--verbose" "--debug" "--unsupported-gpu" ];
+      # extraOptions = [ "--verbose" "--debug" ];
       config = mkMerge [
         commonOptions.config
         { output = { "*" = { bg = "~/.background-image fill"; }; }; }
@@ -45,6 +45,30 @@ in {
           # bindsym $mod+c exec grim  -g "$(slurp)" /tmp/$(date +'%H:%M:%S.png')
         }
       ];
+      extraSessionCommands = ''
+        export __GLX_VENDOR_LIBRARY_NAME=nvidia
+        export _JAVA_AWT_WM_NONREPARENTING=1
+        export BEMENU_BACKEND=wayland
+        export CLUTTER_BACKEND=wayland
+        export ECORE_EVAS_ENGINE=wayland_egl
+        export ELM_ACCEL=gl
+        export ELM_DISPLAY=wl
+        export ELM_ENGINE=wayland_egl
+        export GBM_BACKEND=nvidia-drm
+        export GBM_BACKENDS_PATH=/etc/gbm
+        export GDK_BACKEND=wayland
+        export MOZ_DBUS_REMOTE=1
+        export MOZ_ENABLE_WAYLAND=1
+        export NO_AT_BRIDGE=1
+        export QT_QPA_PLATFORM=wayland-egl # needs qt5.qtwayland in systemPackages
+        export QT_QPA_PLATFORMTHEME="qt5ct"
+        export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+        export SAL_USE_VCLPLUGIN=gtk3
+        export SDL_VIDEODRIVER=wayland
+        export WLR_NO_HARDWARE_CURSORS=1
+        export XDG_CURRENT_DESKTOP="sway"
+        export XDG_SESSION_TYPE="wayland"
+      '';
     };
 
     # environment.systemPackages = with pkgs; [
