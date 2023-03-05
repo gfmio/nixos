@@ -8,6 +8,7 @@
 with lib;
 
 let
+  nvidiaPackage = config.hardware.nvidia.package;
   cfg = config.modules.hardware.nvidia;
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
@@ -74,6 +75,15 @@ in {
 
     hardware.nvidia.open = false;
 
+    environment.systemPackages = with pkgs; [
+      nvidia-vaapi-driver
+      vulkan-tools
+    ];
+
+    environment.etc = {
+      "gbm/nvidia-drm_gbm.so".source = "${nvidiaPackage}/lib/gbm/nvidia-drm_gbm.so";
+    };
+
     # hardware.opengl = {
     #   extraPackages = with pkgs; [
     #     mpi
@@ -96,8 +106,8 @@ in {
     services.xserver.displayManager.gdm.wayland = true;
 
     # Prime
-    environment.systemPackages =
-      mkIf (cfg.enablePrime && (cfg.primeMode == "offload")) [ nvidia-offload ];
+    # environment.systemPackages =
+    #   mkIf (cfg.enablePrime && (cfg.primeMode == "offload")) [ nvidia-offload ];
     hardware.nvidia.prime = mkIf cfg.enablePrime {
       offload.enable = (cfg.primeMode == "offload");
       sync.enable = (cfg.primeMode == "sync");
