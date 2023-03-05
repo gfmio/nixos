@@ -117,7 +117,7 @@ let
         x = { enable = true; };
         displayManager = {
           enable = true;
-          displayManager = "gdm";
+          displayManager = "startx";
           defaultSession = "sway";
           # defaultSession = "none+i3";
         };
