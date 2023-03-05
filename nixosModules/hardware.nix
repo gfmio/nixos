@@ -31,6 +31,11 @@ in {
       extraPackages = [ pkgs.mesa.drivers ];
     };
 
+    environment.systemPackages = with pkgs; [
+      mesa
+      vulkan-loader
+    ];
+
     # Enable all the firmware
     hardware.enableAllFirmware = true;
     # Enable all the firmware with a license allowing redistribution. (i.e. free firmware and firmware-linux-nonfree)
