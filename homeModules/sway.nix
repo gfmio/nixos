@@ -65,9 +65,12 @@ in {
         export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
         export SAL_USE_VCLPLUGIN=gtk3
         export SDL_VIDEODRIVER=wayland
+        # export WLR_RENDERER=vulkan
+        export XWAYLAND_NO_GLAMOR=1
         export WLR_NO_HARDWARE_CURSORS=1
         export XDG_CURRENT_DESKTOP="sway"
         export XDG_SESSION_TYPE="wayland"
+        export XDG_BACKEND="wayland"
       '';
     };
 
