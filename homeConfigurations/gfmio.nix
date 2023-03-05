@@ -39,12 +39,12 @@ let
       home.homeDirectory = "/home/gfmio";
       programs.home-manager.enable = true;
       # nixpkgs.config.allowUnfree = true;
-      home.packages = with pkgs; [ ];
+      home.packages = with pkgs; [ go-task ];
 
       modules = {
         x = {
           enable = true;
-          scale = 1.0;
+          scale = 2.0;
         };
         i3 = { enable = true; };
         i3status = {
