@@ -74,6 +74,8 @@ let
       nixpkgs.config.allowUnfree = true;
       nixpkgs.config.allowBroken = true;
 
+     environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
       modules = {
         hardware = {
           enable = true;
