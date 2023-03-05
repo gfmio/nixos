@@ -22,14 +22,14 @@ in {
           type = types.bool;
           default = false;
         };
-        displayManager = mkOption { type = types.enum [ "startx" "gdm" "lightdm" "greetd" ]; };
+        displayManager = mkOption { type = types.enum [ "none" "startx" "gdm" "lightdm" "greetd" ]; };
         defaultSession = mkOption { type = types.str; };
       };
     };
   };
 
   config = mkIf cfg.enable {
-    services.xserver.displayManager = {
+    services.xserver.displayManager = mkIf (cfg.displayManager != "none") {
       startx = {
         enable = (cfg.displayManager == "startx");
       };
