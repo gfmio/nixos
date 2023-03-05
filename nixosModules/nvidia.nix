@@ -74,15 +74,15 @@ in {
 
     hardware.nvidia.open = false;
 
-    hardware.opengl = {
-      extraPackages = with pkgs; [
-        mpi
-        linuxPackages.nvidia_x11
-        # can't remember which is needed:
-        # cudatoolkit
-        # cudatoolkit.lib
-      ];
-    };
+    # hardware.opengl = {
+    #   extraPackages = with pkgs; [
+    #     mpi
+    #     linuxPackages.nvidia_x11
+    #     # can't remember which is needed:
+    #     # cudatoolkit
+    #     # cudatoolkit.lib
+    #   ];
+    # };
 
     # GDM
     services.xserver.displayManager.gdm.wayland = true;
