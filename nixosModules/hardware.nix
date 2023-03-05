@@ -28,13 +28,13 @@ in {
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = [ pkgs.mesa.drivers ];
+      # extraPackages = [ pkgs.mesa.drivers ];
     };
 
-    environment.systemPackages = with pkgs; [
-      mesa
-      vulkan-loader
-    ];
+    # environment.systemPackages = with pkgs; [
+    #   mesa
+    #   vulkan-loader
+    # ];
 
     # Enable all the firmware
     hardware.enableAllFirmware = true;
