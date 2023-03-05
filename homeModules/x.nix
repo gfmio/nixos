@@ -43,9 +43,9 @@ in {
     xsession.enable = true;
 
     home.pointerCursor = {
-      # package = pkgs.vanilla-dmz;
-      # name = "Vanilla-DMZ";
-      name = "Default";
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
+      # name = "Default";
       size = builtins.floor (32 * cfg.scale);
       x11.enable = true;
     };
