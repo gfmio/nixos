@@ -46,7 +46,8 @@ let
           enable = true;
           scale = 2.0;
         };
-        i3 = { enable = true; };
+        i3 = { enable = false; };
+        sway = { enable = false; };
         i3status = {
           enable = true;
           ipv6 = false;
@@ -75,7 +76,6 @@ let
         };
         gpg = { enable = true; };
         gnome-passwordsafe = { enable = true; };
-        sway = { enable = true; };
         gnome-disk-utility = { enable = true; };
         slack = { enable = true; };
         gnome-keyring = { enable = false; };

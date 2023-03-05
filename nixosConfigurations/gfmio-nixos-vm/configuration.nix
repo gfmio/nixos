@@ -117,13 +117,13 @@ let
         x = { enable = true; };
         displayManager = {
           enable = true;
-          displayManager = "startx";
-          defaultSession = "sway";
+          displayManager = "gdm";
+          defaultSession = "gnome";
           # defaultSession = "none+i3";
         };
         gnome = { enable = true; };
-        sway = { enable = true; debug = true; verbose = true; unsupportedGPU = true;  };
-        i3 = { enable = true; };
+        sway = { enable = false; debug = true; verbose = true; unsupportedGPU = true;  };
+        i3 = { enable = false; };
         dconf = { enable = true; };
         users-defaults = { enable = true; };
         cups = { enable = true; };
