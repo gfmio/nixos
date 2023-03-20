@@ -9,7 +9,9 @@ with lib;
 
 let cfg = config.modules.impermanence;
 in {
-  imports = [ ];
+  imports = [
+    inputs.impermanence
+  ];
 
   options = {
     modules = {
