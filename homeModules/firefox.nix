@@ -30,11 +30,11 @@ in {
   config = mkIf cfg.enable {
     programs.firefox = {
       enable = true;
-      extensions = with nur.repos.rycee.firefox-addons; [
-        # https-everywhere
-        privacy-badger
-        ublock-origin
-      ];
+      # extensions = with nur.repos.rycee.firefox-addons; [
+      #   # https-everywhere
+      #   privacy-badger
+      #   ublock-origin
+      # ];
     };
   };
 }
