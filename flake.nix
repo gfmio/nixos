@@ -3,7 +3,7 @@
   inputs = {
     nixpkgs = { url = "flake:nixpkgs/nixpkgs-unstable"; };
     nixos-generators = {
-      url = "flake:nixos-generators";
+      url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -11,8 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence = {
-      url = "flake:nix-community/impermanence";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/impermanence";
     };
   };
   outputs = { self, nixpkgs, nixos-generators, home-manager, impermanence, ... }@inputs:
