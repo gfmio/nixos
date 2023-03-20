@@ -25,6 +25,7 @@ let
       inputs.self.nixosModules.hardware
       inputs.self.nixosModules.i18n
       inputs.self.nixosModules.i3
+      inputs.self.nixosModules.impermanence
       inputs.self.nixosModules.intel
       inputs.self.nixosModules.kernel
       inputs.self.nixosModules.libvirt
@@ -181,6 +182,7 @@ let
         dns = { enable = false; };
         tor = { enable = false; };
         redshift = { enable = false; };
+        impermanence = { enable = false; };
       };
     };
   };

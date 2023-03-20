@@ -10,8 +10,12 @@
       url = "flake:home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    impermanence = {
+      url = "flake:nix-community/impermanence";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, nixos-generators, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-generators, home-manager, impermanence, ... }@inputs:
     let flakeContext = { inherit inputs; };
     in {
       devShells = {
@@ -117,6 +121,7 @@
         hardware = import ./nixosModules/hardware.nix flakeContext;
         i18n = import ./nixosModules/i18n.nix flakeContext;
         i3 = import ./nixosModules/i3.nix flakeContext;
+        impermanence = import ./nixosModules/impermanence.nix flakeContext;
         intel = import ./nixosModules/intel.nix flakeContext;
         kernel = import ./nixosModules/kernel.nix flakeContext;
         libvirt = import ./nixosModules/libvirt.nix flakeContext;

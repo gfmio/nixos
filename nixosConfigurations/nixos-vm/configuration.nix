@@ -25,6 +25,7 @@ let
       inputs.self.nixosModules.hardware
       inputs.self.nixosModules.i18n
       inputs.self.nixosModules.i3
+      inputs.self.nixosModules.impermanence
       inputs.self.nixosModules.intel
       inputs.self.nixosModules.kernel
       inputs.self.nixosModules.libvirt
@@ -156,6 +157,7 @@ let
         dbus = { enable = true; };
         wayland = { enable = true; };
         logind = { enable = false; };
+        impermanence = { enable = false; };
       };
 
       # nixpkgs.system-features = [ "gccarch-armv8-a" "nixos-test" "benchmark" "big-parallel" "kvm" ];
