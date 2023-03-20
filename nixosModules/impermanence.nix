@@ -10,7 +10,7 @@ with lib;
 let cfg = config.modules.impermanence;
 in {
   imports = [
-    inputs.impermanence
+    inputs.impermanence.nixosModules.impermanence
   ];
 
   options = {
