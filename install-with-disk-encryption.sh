@@ -48,6 +48,7 @@ sudo vgcreate homevg /dev/mapper/homecryptlvm
 # Create all your logical volumes on the volume group:
 
 sudo lvcreate -L 35G rootvg -n swap
+sudo lvcreate -L 512M rootvg -n boot
 sudo lvcreate -l 100%FREE rootvg -n root
 
 sudo lvcreate -l 100%FREE homevg -n home
@@ -61,13 +62,16 @@ sudo lvreduce -L -256M homevg/home
 
 sudo mkfs.fat -F 32 $DISK1P1
 
+sudo mkfs.fat -F 32 /dev/rootvg/boot
 sudo mkfs.ext4 /dev/rootvg/root
 sudo mkfs.ext4 /dev/homevg/home
 sudo mkswap /dev/rootvg/swap
 
 # Mount the file systems
 
-sudo mount /dev/rootvg/root /mnt/nix
+sudo mount -t tmpfs none /mnt
+sudo mount --mkdir /dev/rootvg/boot /mnt/boot
+sudo mount --mkdir /dev/rootvg/root /mnt/nix
 sudo mount --mkdir /dev/homevg/home /mnt/home
 sudo mount --mkdir $DISK1P1 /mnt/boot/efi
 sudo swapon /dev/rootvg/swap
@@ -86,14 +90,14 @@ sudo nixos-generate-config --root /mnt;
 
 # Install NixOS
 
-sudo nixos-install;
+# sudo nixos-install;
 
 # Unmount
 
-sudo umount /mnt/boot;
-sudo umount /mnt/home;
-sudo umount /mnt/nix;
+# sudo umount /mnt/boot;
+# sudo umount /mnt/home;
+# sudo umount /mnt/nix;
 
 # Reboot
 
-sudo reboot;
+# sudo reboot;
