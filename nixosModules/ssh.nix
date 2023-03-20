@@ -37,9 +37,11 @@ in {
   config = mkIf cfg.enable {
     services.openssh = {
       enable = true;
-      permitRootLogin = mkDefault (if cfg.permitRootLogin then "yes" else "no");
+      settings = {
+        PermitRootLogin = mkDefault (if cfg.permitRootLogin then "yes" else "no");
+        PasswordAuthentication = cfg.passwordAuthentication;
+      };
       startWhenNeeded = true;
-      passwordAuthentication = cfg.passwordAuthentication;
     };
     networking.firewall = mkIf cfg.openPort { allowedTCPPorts = [ 22 ]; };
   };
