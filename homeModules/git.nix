@@ -64,6 +64,9 @@ in {
           new = "green bold";
           whitespace = "red reverse";
         };
+        "url \"ssh://git@github.com/\"" = {
+          insteadOf = https://github.com/;
+        };
       };
     };
   };
