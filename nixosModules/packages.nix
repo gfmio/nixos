@@ -167,7 +167,7 @@ in {
       gimp
       # Media
       # plex-media-player
-      vlc
+      # vlc
       # VM
       open-vm-tools
       # Hardware
