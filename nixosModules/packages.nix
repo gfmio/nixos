@@ -163,7 +163,7 @@ in {
       # terraform_0_12
       vagrant
       # tdesktop
-      libreoffice
+      # libreoffice
       gimp
       # Media
       # plex-media-player
