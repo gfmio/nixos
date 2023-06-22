@@ -132,7 +132,7 @@ in {
       # php73
       # php73Packages.composer
       # python27Full
-      python39Full
+      # python39Full
       # go_1_12
       # shellcheck
       git
