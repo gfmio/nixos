@@ -68,7 +68,9 @@ in {
       };
 
       # Clean /tmp upon restart
-      cleanTmpDir = true;
+      tmp = {
+        cleanOnBoot = true;
+      };
 
       # Plymouth boot splash screen
       plymouth = {
