@@ -31,9 +31,21 @@ in {
   config = mkIf cfg.enable {
     # Bluetooth
     # https://nixos.wiki/wiki/Bluetooth
-    hardware.bluetooth.enable = true;
-    # Don't power up the default Bluetooth controller on boot
-    hardware.bluetooth.powerOnBoot = cfg.powerOnBoot;
+
+    hardware.bluetooth = {
+      enable = true;
+      # Don't power up the default Bluetooth controller on boot
+      powerOnBoot = cfg.powerOnBoot;
+      settings = {
+        General = {
+          # Enable support for bluetooth audio
+          Enable = "Source,Sink,Media,Socket";
+          ControllerMode = "bredr";
+        };
+      };
+      # Appears to crash the bluetooth driver?
+      disabledPlugins = ["sap"];
+    };
 
     services.blueman.enable = true;
   };
