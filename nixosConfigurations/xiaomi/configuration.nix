@@ -6,6 +6,7 @@ let
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
       (inputs.self.nixosModules.users.gfmio { system = system; })
+      inputs.self.nixosModules._1password
       inputs.self.nixosModules.bluetooth
       inputs.self.nixosModules.boot
       inputs.self.nixosModules.clamav
@@ -183,6 +184,7 @@ let
         tor = { enable = false; };
         redshift = { enable = false; };
         impermanence = { enable = false; };
+        _1password = { enable = true; };
       };
     };
   };

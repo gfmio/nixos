@@ -100,6 +100,7 @@
       nixosModules = {
         users = { gfmio = import ./nixosModules/users/gfmio.nix flakeContext; };
 
+        _1password = import ./nixosModules/1password.nix flakeContext;
         bluetooth = import ./nixosModules/bluetooth.nix flakeContext;
         boot = import ./nixosModules/boot.nix flakeContext;
         clamav = import ./nixosModules/clamav.nix flakeContext;
