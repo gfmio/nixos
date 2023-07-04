@@ -50,7 +50,6 @@ in {
         # Use grub
         grub = {
           enable = (cfg.loader == "grub");
-          version = 2;
           efiSupport = true;
           # Define on which hard drive you want to install Grub.
           # device = "/dev/sda";
