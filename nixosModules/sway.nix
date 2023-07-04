@@ -91,6 +91,10 @@ in {
       wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
       bemenu # wayland clone of dmenu
       mako # notification system developed by swaywm maintainer
+
+      vulkan-tools
+      vulkan-extension-layer
+      vulkan-validation-layers
     ];
 
     # environment.variables = {
