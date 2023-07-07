@@ -61,6 +61,7 @@ in {
     environment.etc = {
       "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
         bluez_monitor.properties = {
+          ["bluez5.reconnect-profiles"] = "[ hfp_hf hsp_hs a2dp_sink ]";
           ["bluez5.enable-sbc-xq"] = true,
           ["bluez5.enable-msbc"] = true,
           ["bluez5.enable-hw-volume"] = true,
